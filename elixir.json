@@ -1,0 +1,5 @@
+{
+  "production": false,
+  "bowerDir": "vendor/",
+  "sourcemaps": false
+}

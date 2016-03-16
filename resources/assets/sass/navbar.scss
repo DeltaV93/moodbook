@@ -1,0 +1,27 @@
+.navbar-default {
+	background: #FFFFFF;
+	border-radius: 0;
+	height: 80px;
+	margin-bottom: 0px;
+
+&::after {
+		content: "";
+		background: linear-gradient(-90deg, #3023AE 0%, #53A0FD 48%, #B4EC51 100%);
+		height: 5px;
+		width: 100%;
+		position: absolute;
+		top: 74px;
+	}
+}
+
+.brandLogo {
+	font-size: 30px;
+	top: 9px;
+	position: absolute;
+}
+.navbar-items {
+	letter-spacing: 5.49px;
+	color: #21252A;
+	margin: 0 10px;
+
+}

@@ -1,0 +1,41 @@
+.editable--title {
+	height: 80px;
+	opacity: 0.75;
+	font-family: OpenSans-Light;
+	color: #000;
+	font-size: 48px;
+	letter-spacing: 9.79px;	
+	text-align: center;
+}
+::-webkit-input-placeholder { /* WebKit browsers */
+    color: #8C8A8A;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color: #8C8A8A;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color: #8C8A8A;
+}
+:-ms-input-placeholder { /* Internet Explorer 10+ */
+    color: #8C8A8A;
+}
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+    color: #8C8A8A;
+}
+input:-moz-placeholder, textarea:-moz-placeholder {
+    color: #8C8A8A;
+}
+
+.entry_post--colorbox__create::after{
+	content: "Color Box";
+	position: relative;
+	color: white;
+	top: 200px;
+	font-family: 'OpenSans';
+	letter-spacing: 3.67px;
+}
+.editable--textarea {
+	margin-top: 60px;
+	font-size: 1.2em;
+}
+

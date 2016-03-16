@@ -1,0 +1,91 @@
+.text-box {
+	border: 1px solid #979797;
+	box-shadow: inset 0px 1px 5px 0px rgba(0,0,0,0.50);
+	border-radius: 8px;
+}
+.defult--input {
+	background: #F9F9F9;
+	height: 50px;
+	border: none;
+	border-radius: 0;
+	
+}
+.form-group {
+	&::after{
+		content: "";
+	    position: absolute;
+	    background-image: linear-gradient(90deg, #11C7B8 0%, #1A5A78 100%);
+
+	}
+
+}
+.form-group--login {
+	margin-top: 47px;	
+	&::after{
+		top: 47px;
+		height: 2px;
+		width: 432px;
+		left: 400px;		
+	}
+}
+.form-group--siginup {
+	margin-top: 47px;
+	&::after{
+		content: "";
+	}
+}
+
+.login--welcome {
+	margin-top: 100px;
+	font-family: Raleway-Regular;
+	font-size: 44px;
+	color: #21252A;
+	letter-spacing: 8.96px;
+}
+.login--label {
+	font-family: Raleway-Regular;
+	top: 5px;
+	font-size: 1.5em;
+	color: #21252A;
+	letter-spacing: 5.49px;
+}
+.login--signup {
+	letter-spacing: 3.66px;	
+}
+.login--alt-forms {
+	font-family: OpenSans;
+	font-size: 17px;
+	color: #222223;
+	letter-spacing: 3.47px;
+	&::after{
+		content:"";
+		position: relative;
+		height: 1px;
+		width: 100px;
+		top: 100px;
+		background-color:rgba(151,151,151, .57); 
+	}	
+}
+.defult--button {
+	margin-top: 20px;
+	margin-bottom: 55px;
+}
+.signup--sm::before {
+	content: " ";
+	background-image: linear-gradient(90deg, #11C7B8 0%, #1A5A78 100%);
+	height: 2px;
+	width: 14.01em; 
+	position: absolute;
+	top: 5.125rem;
+}
+.signup--lg::before {
+	content: " ";
+	background-image: linear-gradient(90deg, #11C7B8 0%, #1A5A78 100%);
+	height: 2px;
+	width: 37.51em; 
+	position: absolute;
+	top: 5.125rem;
+}
+.form-button {
+	margin-bottom: 30px;
+}

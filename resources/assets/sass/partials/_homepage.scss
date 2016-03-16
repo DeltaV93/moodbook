@@ -1,0 +1,58 @@
+
+
+.jumbotron-into {
+	background: linear-gradient(rgba(0,0,0, 0.5),rgba(0,0,0, 0.5)),url(../img/1.png);
+	background-size: cover;
+	height: 623px;	
+}
+.jumbotron-intro--title, .jumbotron-intro--sub-title {
+	margin-left: 45px;
+
+}
+.jumbotron-intro--title {
+	margin-top: 150px;	
+}
+.jumbotron-video {
+// 	// background:linear-gradient(rgba(50,50,50, 0.8), rgba(50,50,50, 0.8)), url(http://www.typingtest.co.in/wp-content/uploads/2015/10/typing-test-speed.jpg);
+// 	// background-size: cover;
+// 	// height: 623px;
+	background-color: #fff;
+}
+
+.testdrive--textbox {
+	width: 566px;
+	height: 314px;	
+}
+.about-us {
+	padding: 0 40px 0 40px;
+	margin-top: 110px;
+	margin-bottom: 186px;
+}
+.about-us-img{
+	width: 200px;
+	height: 200px;
+}
+.about-us-why{
+	background-image: linear-gradient(-180deg, #11C7B8 0%, #1A5A78 100%);
+}
+.about-us-how{
+	background-image: linear-gradient(-180deg, #FAD961 0%, #F76B1C 100%);
+}
+.about-us-where {
+	background-image: linear-gradient(-180deg, #E85D5A 0%, #33014D 100%);
+}
+
+.about-us-body {
+	width: 255px;
+}
+.testdrive-colorbox {
+    position: absolute;
+    left: 785px;
+    top: 2348px;
+    height: 550px;
+    background-image: linear-gradient(-180deg, #FAF2D8 0%, #F0CCB7 20%, #7F9993 46%, #1E6D74 69%, #0B3134 93%);
+}
+
+.test-drive p {
+	width: 555px;
+}
