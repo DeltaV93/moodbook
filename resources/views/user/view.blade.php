@@ -38,7 +38,7 @@
 				</ul>
 			</div>		
 		</div>
-@@foreach ($entries as $entry)
+@foreach ($entries as $entry)
 	{{-- expr --}}
 
 		<div class="container">

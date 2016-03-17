@@ -15,22 +15,22 @@ Route::get('/', function () {
     return view('index');
 });
 
-Route::get('login', function () {
-    return view('layouts.modal.login');
-});
+// Route::get('login', function () {
+//     return view('layouts.modal.login');
+// });
 
-Route::get('register', function () {
-    return view('layouts.modal.register');
-});
+// Route::get('register', function () {
+//     return view('layouts.modal.register');
+// });
 
-
+ Route::resource('user', 'EntriesController');
 
 
 // 
 // USER ACCOUNT ROUTING
 // 
 
-Route::resource('user', 'EntriesController');
+
 
 // Route::get('user/setting', function() {
 //     return view('user.setting');
@@ -53,11 +53,13 @@ Route::get('edit', function () {
 */
 
 Route::group(['middleware' => ['web']], function () {
-    //
+   
 });
 
 Route::group(['middleware' => 'web'], function () {
     Route::auth();
+    
+    Route::get('/login', 'HomeController@index');
+    Route::get('/register', 'HomeController@register');
 
-    Route::get('/home', 'HomeController@index');
 });
