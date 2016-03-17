@@ -1,11 +1,7 @@
 
-<div class="row">
-	<div class="form-group">
-		{!! Form::open() !!}
 		<div class="col-xs-12 col-sm-12 col-md-12  col-lg-12 ">
 			{!! Form::text('entry_title', null, ['class' => 'form-control editable--title', 'placeholder'=>'Untilted']) !!}
 		</div>
-		{!! Form::close() !!}
 	</div>
 </div>
 
@@ -18,15 +14,15 @@
 
 
 <div class="container">
+
 	<div class="editable--textarea">
-		{!! Form::open(['method' => 'GET'], ['class' => 'form-group row']) !!}
 		<div class="col-sm-12">
-			{!! Form::textarea('bodyEntry', null, ['class' => 'editable--textarea text-box col-md-12 opensans', 'placeholder' => 'Enter your text here.']) !!}
+			{!! Form::textarea('body_entry', null, ['class' => 'editable--textarea text-box col-md-12 opensans', 'placeholder' => 'Enter your text here.','style'=>"width:100%"]) !!}
 		</div>
 	</div>
 	<div class="editable--tag_field">
 		<div class="col-sm-12">
-			{!! Form::text('tagField', null, ['placeholder' => '#Tags']) !!}
+			{!! Form::text('tag_field', null, ['placeholder' => '#Tags']) !!}
 		</div>
 	</div>
 
@@ -42,7 +38,5 @@
 			</div>
 	</div>
 			<div class="col-sm-2 pull-right">
-				{!! Form::button('save', ['class' => 'btn btn-defult']) !!}
+				{!! Form::submit($submitButton, ['class' => 'btn btn-defult']) !!}
 			</div>
-		{!! Form::close() !!}
-</div>

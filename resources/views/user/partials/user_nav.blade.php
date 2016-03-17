@@ -1,4 +1,4 @@
-<nav class="navbar navbar-default">
+<nav class="navbar navbar-default navbar-fixed-top">
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
@@ -15,8 +15,8 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 
       <ul class="nav navbar-nav navbar-right">
-        <li><a class="navbar-items" href="/create">New Entry</a></li>
-        <li><a class="navbar-items" href="/home">Username</a></li>
+        <li><a class="navbar-items" href="user/create">New Entry</a></li>
+        <li><a class="navbar-items" href="/user">Username</a></li>
         <li><a class="navbar-items" href="/login">Logout</a></li>
       </ul>
     </div><!-- /.navbar-collapse -->

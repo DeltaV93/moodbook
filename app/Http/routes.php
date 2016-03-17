@@ -27,21 +27,28 @@ Route::get('register', function () {
 // USER ACCOUNT ROUTING
 // 
 
-Route::get('setting', function () {
-    return view('user.setting');
-});
+// Route::get('user', 'EntriesController@index');
+// Route::get('user/show/{id}', 'EntriesController@show');
+// Route::get('user/create', 'EntriesController@create');
+// Route::post('user', 'EntriesController@store');
 
-Route::get('home', function () {
-    return view('user.home');
-});
+Route::resource('user', 'EntriesController');
 
-Route::get('create', function () {
-    return view('user.create');
-});
+// Route::get('setting', function () {
+//     return view('user.setting');
+// }
 
-Route::get('show', function () {
-    return view('user.view');
-});
+// Route::get('home', function () {
+//     return view('user.home');
+// });
+
+// Route::get('create', function () {
+//     return view('user.create');
+// });
+
+// Route::get('show', function () {
+//     return view('user.view');
+// });
 
 Route::get('edit', function () {
     return view('user.edit');

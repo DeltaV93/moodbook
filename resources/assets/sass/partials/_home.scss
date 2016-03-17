@@ -20,7 +20,7 @@
 }
 
 .profile_header--img {
-	margin-left: 78px;
+	// margin-left: 78px;
 	width: 220px;
 	height: 188px;
 	& img {
@@ -28,7 +28,7 @@
 	}
 }
 .profile_header--users_info {
-	margin-left: 87px;
+	// margin-left: 87px;
 }
 .profile_header--usersname::after {
 	font-family: 'Glyphicons Halflings';
@@ -43,7 +43,9 @@
 	// padding: 0 18px;
 
 }
-
+.profile_header--usersname > span {
+	// margin-left: 55%;
+}
 .entry_post {
 	margin-top: 50px;
 }

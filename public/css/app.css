@@ -11738,14 +11738,10 @@ p {
   background-color: rgba(255, 255, 255, 0.5); }
 
 .profile_header--img {
-  margin-left: 78px;
   width: 220px;
   height: 188px; }
   .profile_header--img img {
     border-radius: 8px; }
-
-.profile_header--users_info {
-  margin-left: 87px; }
 
 .profile_header--usersname::after {
   font-family: 'Glyphicons Halflings';
@@ -11954,3 +11950,6 @@ input:-moz-placeholder, textarea:-moz-placeholder {
 .editable--textarea {
   margin-top: 60px;
   font-size: 1.2em; }
+
+.wrapper {
+  margin-top: 80px; }

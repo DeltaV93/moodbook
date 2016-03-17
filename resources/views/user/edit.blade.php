@@ -1,9 +1,8 @@
 @extends('layouts.user_master')
 @section('content')
 
-<aside>
-</aside>
-<div class="container">
+
+<div class="">
 	<div class="entry_view--icons row">
 
 		<div class="con-sm-6 pull-left">
@@ -21,16 +20,16 @@
 		</ul>
 	</div>
 
-	<div class="container">
-		<div class="row">
-			<div class="col-sm-12 entry_view--date pull-right">
-				<p class="date__month">Month</p>
-				<p class="date__day">Day</p>
-				<p class="date__year">Year</p>			
-			</div>
-		</div>
-	</div>
-@include('user.partials.create')
+
+<div class="row">
+	<div class="form-group">
+
+		{!! Form::model($entries, ['method' => 'PATCH', 'action' => ['EntriesController@update', $entries->id]]) !!}
+				@include('user.partials.create', ['submitButton' => "Update"])
+
+		{!! Form::close() !!}
 
 </div>
+</div>
+
 @endsection 

@@ -12,7 +12,7 @@
 <section class="container about-us">
     <div class="row col-md-12">
         <div class="col-md-4">
-            <img src="{{ URL::asset('/img/why.svg') }}" alt="Stickfigure drawing of someone asking why" class="col-xs-12 col-xs-offset-3 col-sm-4 col-md-5 col-md-offset-1 img-circle about-us-img about-us-why">
+            <img src="{{ URL::asset('/img/why.svg') }}" alt="Stickfigure drawing of someone asking why" class="col-xs-12 col-xs-offset-2 col-sm-4 col-md-5 col-md-offset-1 img-circle about-us-img about-us-why">
             <div class="row col-xs-12 col-sm-12">
             <h2>Why</h2>
             <p class=" light about-us-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
@@ -24,7 +24,7 @@
             </div>    
         </div>
         <div class="container col-md-4">
-            <img src="{{ URL::asset('/img/how.svg') }}" alt="..." class="col-xs-12 col-xs-offset-3 col-sm-4 col-md-5 col-md-offset-1 img-circle about-us-img about-us-how">
+            <img src="{{ URL::asset('/img/how.svg') }}" alt="..." class="col-xs-12 col-xs-offset-2 col-sm-4 col-md-5 col-md-offset-1 img-circle about-us-img about-us-how">
             <div class="row col-xs-12 col-sm-12">
             <h2>How</h2>
             <p class="col-sm-12 light about-us-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
@@ -37,7 +37,7 @@
         </div>
 
         <div class="container col-md-4">
-            <img src="{{ URL::asset('/img/where.svg') }}" alt="..." class="col-xs-12 col-xs-offset-3 col-sm-4 col-md-5 col-md-offset-2 img-circle about-us-img about-us-where">
+            <img src="{{ URL::asset('/img/where.svg') }}" alt="..." class="col-xs-12 col-xs-offset-2 col-sm-4 col-md-5 col-md-offset-2 img-circle about-us-img about-us-where">
             <div class="row col-xs-12 col-sm-12">
             <h2>Where</h2>
             <p class="col-xs-12 col-sm-12 light about-us-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
