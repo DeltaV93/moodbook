@@ -12,8 +12,19 @@ class Entry extends Model
     	'entry_title',
     	'colorbox',
     	'body_entry',
-    	'tag_field'
+    	'tag_field',
+    	'user_id' //temp
     ];
 
+    /**
+     * A Entry is owen by a user
+     *
+     * 
+     */
+    public function user()
+    {
+    	return $this->belongsTo('App\User');
+    }
 }
+
 

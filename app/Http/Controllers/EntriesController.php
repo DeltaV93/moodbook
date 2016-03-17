@@ -19,6 +19,8 @@ class EntriesController extends Controller {
 
 	public function index()
 	{
+		// Auth::user();
+		
 		$entries = Entry::orderBy('created_at', 'desc')->get();
 
 		return view('user.home', compact('entries'));

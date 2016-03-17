@@ -16,7 +16,7 @@ ninak@apple.com
 				<img width="220px" height="188px" src="http://media.tumblr.com/tumblr_lnenqxmj0d1qiw26m.jpg">
 			</div>
 			<div class="profile_header--users_info col-lg-6 col-lg-offset-1 col-md-6 col-md-offset-1  col-sm-7 col-sm-offset-1 ">
-				<h3 class="profile_header--usersname opensans">User Name<span><a href="/setting" class="glyphicon glyphicon-cog col-sm-1 pull-right"></a></span></h3>
+				<h3 class="profile_header--usersname opensans">User Name<span><a href="/user/setting" class="glyphicon glyphicon-cog col-sm-1 pull-right"></a></span></h3>
 				<p class="profile_header--user_bio">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,</p>
 					<div class="container">
