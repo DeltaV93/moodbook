@@ -2,9 +2,9 @@
 @section('content')
 
 
-<div class="container ">
 
-	<h2 class="login--welcome text-center">Hey new friend!</h2>
+
+	
 	{!! Form::open() !!}
 		<div class="col-md-6 form-group form-group--siginup">
 
@@ -26,7 +26,7 @@
 				{!! Form::text('last_name', null, ['class' => 'col-md-12 form-control defult--input','placeholder' => 'Last Name']) !!}
 			</div>
 		</div>
-
+<!--  -->
 		<div class="col-md-12 form-group form-group--siginup">
 			<div class="col-md-1 col-sm-offset-2 login--label">
 				{!! Form::label('email', 'Email:') !!}
@@ -35,7 +35,7 @@
 				{!! Form::email('email', null, ['class' => 'col-md-12 form-control defult--input','placeholder' => 'Email']) !!}
 			</div>
 		</div>
-
+<!--  -->
 		<div class="col-md-12 form-group form-group--siginup">
 			<div class="col-md-1 col-sm-offset-2 login--label">		
 				{!! Form::label('password', 'Create Password:') !!}
@@ -44,6 +44,7 @@
 				{!! Form::password('password', ['class' => 'col-md-12 form-control defult--input','placeholder' => 'Create Password']) !!}
 			</div>
 		</div>
+		
 		<div class="col-md-12 form-group form-group--siginup">
 			<div class="col-md-1 col-sm-offset-2 login--label">		
 				{!! Form::label('password', 'Confirm Password:') !!}

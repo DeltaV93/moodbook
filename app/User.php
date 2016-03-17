@@ -24,9 +24,9 @@ class User extends Authenticatable
         'password', 'remember_token',
     ];
     /**
-     * A user can have many articals
+     * A user can have many entires
      *
-     * @var array
+     * 
      */
     public function entries()
     {
