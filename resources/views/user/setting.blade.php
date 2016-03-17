@@ -3,7 +3,7 @@
 
 <div class="container">
 
-	<h2 class="login--welcome">Settings</h2>
+	<h2 class="login--welcome">Setting</h2>
 		{!! Form::open() !!}
 		
 			<div class="col-md-6 form-group form-group--siginup">

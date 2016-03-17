@@ -5,7 +5,7 @@
 <a href="">...</a> 
 
 -->
-<div class="container-fluid profile_header_colorbox">
+<div class="container profile_header_colorbox">
 
 	<div class="container">
 		<div class="profile_header row">
