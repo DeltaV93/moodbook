@@ -15,13 +15,6 @@ Route::get('/', function () {
     return view('index');
 });
 
-// Route::get('login', function () {
-//     return view('layouts.modal.login');
-// });
-
-// Route::get('register', function () {
-//     return view('layouts.modal.register');
-// });
 
  Route::resource('user', 'EntriesController');
 
