@@ -26,9 +26,9 @@ class EntriesController extends Controller {
 		return view('user.home', compact('entries'));
 	}
 
-	public function show($user)
+	public function show($id)
 	{
-		$entries = Entry::findOrFail($user);
+		$entries = Entry::findOrFail($id);
 		// return $entries;
 		return view('user.view', compact('entries'));
 	}

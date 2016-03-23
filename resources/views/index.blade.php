@@ -74,10 +74,11 @@
                     <p>Try us out right now. Type in your last status update, or anything else on your mind. The box to the right will display the moods of your words</p>
                 </div>
                     {!! Form::open() !!}
-                    {!! Form::textarea('testDriveText', null,['class' => 'text-box testdrive--textbox','disabled', 'style'=>"width:100%",'placeholder' => 'If you use postive words, you will get bright colors. Use negative words ... well you get the picture.']) !!}
+                    {!! Form::textarea('testDriveText', null,['class' => 'text-box testdrive--textbox', 'style'=>"width:100%",'placeholder' => 'If you use postive words, you will get bright colors. Use negative words ... well you get the picture.']) !!}
                 <div>
                     {!! Form::submit('Submit', ['class' => 'btn btn-defult defult--input']) !!}      
-                </div>                
+                </div>  
+                    {!! Form::close() !!}            
             </div>
             <div class="col-sm-3 col-md-3 ">
                 <div class="testdrive-colorbox">

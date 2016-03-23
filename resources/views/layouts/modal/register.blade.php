@@ -60,7 +60,15 @@
 			{!! Form::submit('Next', ['class' => 'btn btn-defult defult--input form-control']) !!}
 		</div>
 	{!! Form::close() !!}
-
+@if (count($errors) > 0)
+    <div class="alert alert-danger">
+        <ul>
+            @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+    </div>
+@endif
 </div>
 	
 <!-- <div class="container">

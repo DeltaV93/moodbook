@@ -25,14 +25,17 @@ Route::get('/', function () {
 
 
 
-// Route::get('user/setting', function() {
-//     return view('user.setting');
-// }
-
-
-Route::get('edit', function () {
-    return view('user.edit');
+Route::get('/oldlogin', function() {
+    return view('layouts.modal.login');
 });
+Route::get('/oldregister', function() {
+    return view('layouts.modal.register');
+});
+
+
+// Route::get('edit', function () {
+//     return view('user.edit');
+// });
 
 /*
 |--------------------------------------------------------------------------
@@ -44,11 +47,11 @@ Route::get('edit', function () {
 | kernel and includes session state, CSRF protection, and more.
 |
 */
-
+/*
 Route::group(['middleware' => ['web']], function () {
    
 });
-
+*/
 Route::group(['middleware' => 'web'], function () {
     Route::auth();
     
