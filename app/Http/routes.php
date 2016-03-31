@@ -53,7 +53,7 @@ Route::group(['middleware' => 'web'], function () {
     Route::auth();
 
     Route::get('/', function () {
-    	//dd(Auth::user());
+    	// dd(Auth::user());
 	    return view('index');
 	});
     
