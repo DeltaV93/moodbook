@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-            <title>@yield('title') | Project Name</title>
+            <title>@yield('title') | Moodbook</title>
             <meta name="description" content="@yield('description')">
             
         <link rel="icon" href="{!! asset('favicon.png') !!}" type="image/x-icon">
@@ -31,5 +31,6 @@
         
         {{-- APP SCRIPTS --}}
         {!! HTML::script('js/app.js') !!}
+            @yield('scripts')
     </body>
 </html>
