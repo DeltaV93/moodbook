@@ -28,9 +28,11 @@
             @yield('modal')
         @include('layouts.partials.footer')
         {{-- APP CONTENT ENDS --}}
-        
+        {!! HTML::script('js/toolbar.js') !!}
         {{-- APP SCRIPTS --}}
         {!! HTML::script('js/app.js') !!}
+        {!! HTML::script('js/advanced_and_extended.js') !!}
+        {!! HTML::script('js/editor.js') !!}
             
     </body>
 </html>

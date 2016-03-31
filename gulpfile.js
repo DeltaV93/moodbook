@@ -36,9 +36,7 @@ elixir(function(mix) {
   // Add Scripts to project
   mix.copy(paths.jquery + 'jquery.js', 'resources/js/jquery.js')
      .copy(paths.wysihtml + 'parser_rules/advanced_and_extended.js', 'resources/js/advanced_and_extended.js')
-     .copy(paths.wysihtml + 'parser_rules/simple.js', 'resources/js/simple.js')
      .copy(paths.wysihtml + 'dist/wysihtml-toolbar.js', 'resources/js/toolbar.js')
-     .copy(paths.wysihtml + 'dist/wysihtml.js', 'resources/js/wysihtml.js')
      .copy(paths.bootstrap + 'dist/js/bootstrap.js', 'resources/js/bootstrap.js');
 
   // Merge Styles
@@ -48,13 +46,11 @@ elixir(function(mix) {
 
   // Merge Scripts
   mix.scripts([
-    'wysihtml.js',
-    'toolbar.js',
+    // 'toolbar.js',
     'jquery.js', 
     'bootstrap.js',
-    'simple.js',
-    'advanced_and_extended.js',
-    'editor.js',
+    // 'advanced_and_extended.js',
+    // 'editor.js',
   ],'public/js/app.js', 'resources/js');
 
   // Compile SASS

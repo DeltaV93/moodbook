@@ -18,18 +18,17 @@
   <a data-wysihtml5-command="italic">italic</a>
   <a data-wysihtml5-command="formatBlock" data-wysihtml5-command-value="h1">H1</a>
   <a data-wysihtml5-command="formatBlock" data-wysihtml5-command-value="p">P</a>
-  <a data-wysihtml5-command="createLink">insert link</a>
 </div>
-<form>
+<!-- <form id="">
     <textarea id="textarea" placeholder="Enter your text ..." autofocus></textarea>
-</form>
+</form> -->
 
 
 <div class="container">
 
 	<div class="editable--textarea">
  		<div class="col-sm-12">
-			{{--!! Form::textarea('body_entry', null, ['class' => 'editable--textarea text-box col-md-12 opensans', 'id' =>'textarea', 'placeholder' => 'Enter your text here.','style'=>"width:100%"]) !!--}}
+			{!! Form::textarea('body_entry', null, ['class' => 'editable--textarea text-box col-md-12 opensans', 'id' =>'textarea', 'placeholder' => 'Enter your text here.','style'=>"width:100%"]) !!}
 		</div>
 	</div>
 	<div class="editable--tag_field">
