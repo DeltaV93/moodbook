@@ -31,7 +31,9 @@
  
 
         {!! HTML::script('js/app.js') !!}
-
+        {!! HTML::script('js/toolbar.js') !!}
+        {!! HTML::script('js/advanced_and_extended.js') !!}
+        {!! HTML::script('js/editor.js') !!}
 
     </body>
 </html>
