@@ -23,7 +23,6 @@ var paths = {
    'wysihtml': components + 'bower_components/wysihtml/',
    'fontawesome': components + 'bower_components/font-awesome/'
 }
-
 // Begin Elixir Project
 elixir(function(mix) {
 
@@ -36,8 +35,10 @@ elixir(function(mix) {
 
   // Add Scripts to project
   mix.copy(paths.jquery + 'jquery.js', 'resources/js/jquery.js')
-     .copy(paths.wysihtml + 'dist/wysihtml-toolbar.min.js', 'resources/js/wysihtml-toolbar.min.js')
      .copy(paths.wysihtml + 'parser_rules/advanced_and_extended.js', 'resources/js/advanced_and_extended.js')
+     .copy(paths.wysihtml + 'parser_rules/simple.js', 'resources/js/simple.js')
+     .copy(paths.wysihtml + 'dist/wysihtml-toolbar.js', 'resources/js/toolbar.js')
+     .copy(paths.wysihtml + 'dist/wysihtml.js', 'resources/js/wysihtml.js')
      .copy(paths.bootstrap + 'dist/js/bootstrap.js', 'resources/js/bootstrap.js');
 
   // Merge Styles
@@ -47,10 +48,13 @@ elixir(function(mix) {
 
   // Merge Scripts
   mix.scripts([
+    'wysihtml.js',
+    'toolbar.js',
     'jquery.js', 
     'bootstrap.js',
-    'wysihtml-toolbar.min.js',
+    'simple.js',
     'advanced_and_extended.js',
+    'editor.js',
   ],'public/js/app.js', 'resources/js');
 
   // Compile SASS

@@ -28,6 +28,10 @@
         {{-- APP CONTENT ENDS --}}
         
         {{-- APP SCRIPTS --}}
+ 
+
         {!! HTML::script('js/app.js') !!}
+
+
     </body>
 </html>

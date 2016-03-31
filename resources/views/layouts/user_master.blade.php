@@ -31,6 +31,6 @@
         
         {{-- APP SCRIPTS --}}
         {!! HTML::script('js/app.js') !!}
-            @yield('scripts')
+            
     </body>
 </html>

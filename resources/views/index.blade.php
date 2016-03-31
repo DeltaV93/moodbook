@@ -72,9 +72,18 @@
             <div class="col-sm-9 col-md-9 test-drive">
                 <div class="container">
                     <p>Try us out right now. Type in your last status update, or anything else on your mind. The box to the right will display the moods of your words</p>
+                
+                <div id="toolbar">
+                  <a data-wysihtml5-command="bold">bold</a>
+                  <a data-wysihtml5-command="italic">italic</a>
+                  <a data-wysihtml5-command="formatBlock" data-wysihtml5-command-value="h1">H1</a>
+                  <a data-wysihtml5-command="formatBlock" data-wysihtml5-command-value="p">P</a>
+                  <a data-wysihtml5-command="createLink">insert link</a>
+                </div>
+
                 </div>
                     {!! Form::open() !!}
-                    {!! Form::textarea('testDriveText', null,['class' => 'text-box testdrive--textbox', 'style'=>"width:100%",'placeholder' => 'If you use postive words, you will get bright colors. Use negative words ... well you get the picture.']) !!}
+                    {!! Form::textarea('testDriveText', null,['class' => 'text-box testdrive--textbox','id'=>'textarea','style'=>"width:100%",'placeholder' => 'If you use postive words, you will get bright colors. Use negative words ... well you get the picture.']) !!}
                 <div>
                     {!! Form::submit('Submit', ['class' => 'btn btn-defult defult--input']) !!}      
                 </div>  
