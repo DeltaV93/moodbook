@@ -28,8 +28,8 @@ class User extends Authenticatable
      *
      * 
      */
-    // public function entries()
-    // {
-    //     return $this->hasMany('App\Entry');
-    // }
+    public function entries()
+    {
+        return $this->hasMany('App\Entry');
+    }
 }

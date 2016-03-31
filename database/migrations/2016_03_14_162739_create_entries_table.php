@@ -17,7 +17,7 @@ class CreateEntriesTable extends Migration
             $table->integer('user_id')->unsigned();
             $table->string('entry_title');
             $table->string('colorbox');
-            $table->string('body_entry');
+            $table->text('body_entry');
             $table->string('tag_field');
             $table->timestamps();
 

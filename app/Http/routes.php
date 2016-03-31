@@ -11,12 +11,9 @@
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-});
 
 
- Route::resource('user', 'EntriesController');
+ 
 
 
 // 
@@ -54,8 +51,14 @@ Route::group(['middleware' => ['web']], function () {
 */
 Route::group(['middleware' => 'web'], function () {
     Route::auth();
+
+    Route::get('/', function () {
+    	//dd(Auth::user());
+	    return view('index');
+	});
     
-    Route::get('/login', 'HomeController@index');
+    Route::resource('user', 'EntriesController');
+    // Route::get('/login', 'HomeController@index');
     Route::get('/register', 'HomeController@register');
 
 });

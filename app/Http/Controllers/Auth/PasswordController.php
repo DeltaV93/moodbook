@@ -19,6 +19,13 @@ class PasswordController extends Controller
     */
 
     use ResetsPasswords;
+    /**
+     * Where to redirect users after login / registration.
+     *
+     * @var string
+     */
+    protected $redirectTo = '/user';
+    // protected $guard = 'admin';
 
     /**
      * Create a new password controller instance.
@@ -27,6 +34,6 @@ class PasswordController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('guest');
+        $this->middleware('auth');
     }
 }

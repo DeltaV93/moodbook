@@ -17,7 +17,7 @@
       <ul class="nav navbar-nav navbar-right">
         <li><a class="navbar-items" href="user/create">New Entry</a></li>
         <li><a class="navbar-items" href="/user">Username</a></li>
-        <li><a class="navbar-items" href="/login">Logout</a></li>
+        <li><a class="navbar-items" href="/logout">Logout</a></li>
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->

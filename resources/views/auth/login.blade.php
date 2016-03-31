@@ -14,7 +14,7 @@
     </div>
 @endif    
     <div class="container">
-        <form class="form-horizontal" role="form" method="POST" action="{{ url('/login') }}">
+        <form  class="form-horizontal" role="form" method="POST" action="{{ url('/login') }}">
             {!! csrf_field() !!}
             <div class="col-md-12 form-group form-group--login">
                 <div class="col-md-1 col-sm-offset-2 login--label">
