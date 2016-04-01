@@ -37,6 +37,7 @@
             </div>
 
             <p class="light italic opensans login--signup">Need to sign up? <a href="/register"> Click here</a></p>
+            <p class="light italic opensans login--signup">LOGIN WITH FACEBOOK <a href="redirect"> Click here</a></p>
 
             <div class="form-group">
                 <div class="col-md-2 col-md-offset-7">

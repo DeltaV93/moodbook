@@ -29,6 +29,9 @@ Route::get('/oldregister', function() {
     return view('layouts.modal.register');
 });
 
+Route::get('home', function(){
+    return view('home');
+});
 
 // Route::get('edit', function () {
 //     return view('user.edit');
@@ -44,19 +47,28 @@ Route::get('/oldregister', function() {
 | kernel and includes session state, CSRF protection, and more.
 |
 */
-/*
-Route::group(['middleware' => ['web']], function () {
-   
-});
-*/
+
 Route::group(['middleware' => 'web'], function () {
     Route::auth();
 
     Route::get('/', function () {
-    	// dd(Auth::user());
 	    return view('index');
 	});
-    
+
+/* 
+|
+| ROUTES TO ALLOW USERS TO LOGIN IN VIA TWITTER 
+|
+*/     
+        Route::get('/redirect', 'SocialAuthController@redirect');
+        Route::get('/callback', 'SocialAuthController@callback');
+    // Route::get('auth/twitter', 'AuthAuthController@redirectToProvider');
+    // Route::get('auth/twitter/callback', 'AuthAuthController@handleProviderCallback');    
+/* 
+|
+| ROUTES HANDEL ENTIRY & USER CONTROLLER INFO 
+|
+*/      
     Route::resource('user', 'EntriesController');
     // Route::get('/login', 'HomeController@index');
     Route::get('/register', 'HomeController@register');
