@@ -35,11 +35,12 @@ return [
         'secret' => env('STRIPE_SECRET'),
     ],
 
-    // 'twitter' => [
-    //     'consumer_key' => env('TWITTER_CONSUMER_KEY'),
-    //     'consumer_secret' => env('TWITTER_CONSUMER_SECRET'),
-    //     'redirect' => env('CALLBACK_URL'),
-    //  ],
+    'twitter' => [
+        'client_id' => env('TWITTER_CLIENT_ID'),
+        'client_secret' => env('TWITTER_CLIENT_SECRET'),
+        'redirect' => env('CALLBACK_URL'),
+     ],
+
     'facebook' => [
         'client_id' => env('FACEBOOK_CLIENT_ID'),
         'client_secret' => env('FACEBOOK_SECRET'),

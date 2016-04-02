@@ -68,6 +68,7 @@
                             </button>
                         </div>
                     </div>
-
+<p class="light italic opensans login--signup">LOGIN WITH FACEBOOK <a href="redirect/facebook"> Click here</a></p>
+<p class="light italic opensans login--signup">LOGIN WITH twitter <a href="redirect/twitter"> Click here</a></p>
     </form>
 @endsection

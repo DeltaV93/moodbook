@@ -29,9 +29,7 @@ Route::get('/oldregister', function() {
     return view('layouts.modal.register');
 });
 
-Route::get('home', function(){
-    return view('home');
-});
+
 
 // Route::get('edit', function () {
 //     return view('user.edit');
@@ -51,6 +49,10 @@ Route::get('home', function(){
 Route::group(['middleware' => 'web'], function () {
     Route::auth();
 
+    Route::get('/redirect/{provider}', 'SocialAuthController@redirect');
+    
+    Route::get('/callback/{provider}', 'SocialAuthController@callback'); 
+    
     Route::get('/', function () {
 	    return view('index');
 	});
@@ -59,11 +61,12 @@ Route::group(['middleware' => 'web'], function () {
 |
 | ROUTES TO ALLOW USERS TO LOGIN IN VIA TWITTER 
 |
-*/     
-        Route::get('/redirect', 'SocialAuthController@redirect');
-        Route::get('/callback', 'SocialAuthController@callback');
-    // Route::get('auth/twitter', 'AuthAuthController@redirectToProvider');
-    // Route::get('auth/twitter/callback', 'AuthAuthController@handleProviderCallback');    
+*/  
+Route::get('home', function(){
+    return view('home');
+});
+
+   
 /* 
 |
 | ROUTES HANDEL ENTIRY & USER CONTROLLER INFO 

@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.user_master')
 
 @section('content')
 <div class="container">
@@ -12,10 +12,10 @@
                 </div>
 
                 <div>
-{{--                <h4>your name is{{ Auth::User()->name }}</h4>
+{{--                 <h4>your name is{{ Auth::User()->name }}</h4>
                     <h4>Your Twitter handle is{{ Auth::User()->handle }}</h4>
-                    <img src="User avatar" alt="{{ Auth::User()->avatar }}" height="200px" width="200px"> --}}
-                </div>
+                    <img src="User avatar" alt="{{ Auth::User()->avatar }}" height="200px" width="200px">
+                </div> --}}
             </div>
         </div>
 </div>
