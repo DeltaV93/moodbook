@@ -18,13 +18,13 @@ class CreateEntriesTable extends Migration
             $table->string('entry_title');
             $table->string('colorbox');
             $table->text('body_entry');
-            $table->string('tag_field');
+            $table->string('tag_field')->nulable();
             $table->timestamps();
 
-            $table->foreign('user_id')
-                  ->references('id')
-                  ->on('users')
-                  ->onDelete('cascade');
+            // $table->foreign('user_id')
+            //       ->references('id')
+            //       ->on('users')
+            //       ->onDelete('cascade');
         });
     }
 

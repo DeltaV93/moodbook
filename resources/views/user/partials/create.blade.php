@@ -1,8 +1,8 @@
 <!-- Tem -->
-{!! Form::hidden('user_id',3) !!}
+
 <!--  -->
 		<div class="col-xs-12 col-sm-12 col-md-12  col-lg-12 ">
-			{!! Form::text('entry_title', null, ['class' => 'form-control editable--title', 'placeholder'=>'Untilted']) !!}
+			{!! Form::text('entry_title', '', ['class' => 'form-control editable--title', 'placeholder'=>'Untilted']) !!}
 		</div>
 	</div>
 </div>
@@ -25,10 +25,18 @@
 
 
 <div class="container">
-
+	@if (!$errors->isEmpty())
+		<ul>
+			
+		
+		@foreach($errors->all() as $error)
+			<li>{{$error}}</li>
+		@endforeach
+		</ul>
+	@endif
 	<div class="editable--textarea">
  		<div class="col-sm-12">
-			{!! Form::textarea('body_entry', null, ['class' => 'editable--textarea text-box col-md-12 opensans', 'id' =>'textarea', 'placeholder' => 'Enter your text here.','style'=>"width:100%"]) !!}
+			{!! Form::textarea('body_entry','' , ['class' => 'editable--textarea text-box col-md-12 opensans', 'id' =>'textarea', 'placeholder' => 'Enter your text here.','style'=>"width:100%"]) !!}
 		</div>
 	</div>
 	<div class="editable--tag_field">

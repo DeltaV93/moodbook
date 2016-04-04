@@ -4,11 +4,12 @@ namespace App\Http\Controllers;
 
 use App\Entry;
 
-use App\Http\Request;
+// use App\Http\Request;
 
-use Requests;
+use Request;
+use Validator;
 
-use App\Http\Requests\EntryRequest;
+// use App\Http\Requests\EntryRequest;
 
 // use Illuminate\Foundation\Validation\ValidatesRequests;
 
@@ -40,11 +41,27 @@ class EntriesController extends Controller {
 		return view('user.create');
 	}
 
-	public function store(EntryRequest $request)
+	public function store()
 	{
+		$validator = Validator::make(
+			$input = [
+				'entry_title' => Request::get('entry_title'),
+				'body_entry' => Request::get('body_entry')
+			],
 
-		Entry::create($request->all());
-
+			$rules = [
+				'entry_title' => 'required',
+				'body_entry' => 'required'
+			]
+		);
+		if ($validator->fails()) {
+			return redirect()->back()->withErrors($validator);
+		}
+		// dd(123);
+		$entry = Entry::create([
+			'entry_title' => $input['entry_title'],
+			'body_entry' => $input['body_entry']
+		]);
 		return redirect('user');
 
 	}
