@@ -57,13 +57,11 @@ Route::group(['middleware' => 'web'], function () {
 	    return view('index');
 	});
 
-/* 
-|
-| ROUTES TO ALLOW USERS TO LOGIN IN VIA TWITTER 
-|
-*/  
-Route::get('home', function(){
-    return view('home');
+    /* 
+    | ROUTES TO ALLOW USERS TO LOGIN IN VIA TWITTER 
+    */  
+    Route::get('home', function(){
+        return view('home');
 });
 
    
