@@ -39,7 +39,7 @@ class SocialAuthController extends Controller
                 'avatar' => $user->avatar_original,                        
             ];
         SocialAccount::firstOrCreate($data);
-            return redirect()->to('home');                
+            return redirect()->to('user');                
             // dd($user);
     }
 }
