@@ -1,5 +1,5 @@
 <!-- Tem -->
-
+{!! Form::hidden('user_id',1) !!}
 <!--  -->
 		<div class="col-xs-12 col-sm-12 col-md-12  col-lg-12 ">
 			{!! Form::text('entry_title', '', ['class' => 'form-control editable--title', 'placeholder'=>'Untilted']) !!}
@@ -36,7 +36,7 @@
 	@endif
 	<div class="editable--textarea">
  		<div class="col-sm-12">
-			{!! Form::textarea('body_entry','' , ['class' => 'editable--textarea text-box col-md-12 opensans', 'id' =>'textarea', 'placeholder' => 'Enter your text here.','style'=>"width:100%"]) !!}
+			{!! Form::textarea('body_entry','', ['class' => 'editable--textarea text-box col-md-12 opensans', 'id' =>'textarea', 'placeholder' => 'Enter your text here.','style'=>"width:100%"]) !!}
 		</div>
 	</div>
 	<div class="editable--tag_field">
