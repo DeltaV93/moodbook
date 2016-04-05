@@ -49,7 +49,7 @@ ninak 'at' apple.com
 				{{-- expr --}}
 			
 			<div class="entry_post--identifier col-md-5 col-md-offset-1 col-xs-offset-3 col-xs-6">
-				<h3 class="entry_post--identifier__title light"><a href="/user/show/{{ $entry->id}}">{{ $entry->entry_title }}</a></h3>
+				<h3 class="entry_post--identifier__title light"><a href="user/show/{{ $entry->id}}">{{ $entry->entry_title }}</a></h3>
 				<p class="entry_post--identifier__opener">{{$entry->body_entry }}<a href="user/show/{{ $entry->id}}">...</a></p>
 				
 			</div>

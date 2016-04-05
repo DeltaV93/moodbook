@@ -28,9 +28,11 @@ class EntriesController extends Controller {
 
 	public function show($id)
 	{
+		// dd('hey');
 		$entries = Entry::findOrFail($id);
 		// return $entries;
 		return view('user.view', compact('entries'));
+		
 	}
 
 	public function create()
