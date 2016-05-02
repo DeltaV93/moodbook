@@ -61,7 +61,7 @@ class EntriesController extends Controller {
 	}
 	public function edit($id)
 	{
-
+		// dd('hey');
 		$entries = Entry::findOrFail($id);
 
 		return view('user.edit', compact('entries'));
