@@ -47,6 +47,15 @@ class EntriesController extends Controller {
 
 		Entry::create($request->all());
 
+		// GETTING THE WORDS FROM TEXTAREA 
+		// COUNT THE LENTH OF THE WORDS AND DIVIDE IT BY 3
+		// EACH WORD GET ANALAYZED 
+		// FIND WHAT GROUP HAS MORE POSTIVE, NEGATIVE, OR NURTUAL SCORE 
+		// INCREASE EACH COLOR POINT BASED ON THE NUMBER IT HAS *USE COLOR GIST FROM TREVOR GITHUB*
+		// SAVE THIS AS ENTRY_COLOR IN ENTRY DB
+		
+		
+		// $entryWords
 		return redirect('user');
 
 	}
@@ -66,5 +75,14 @@ class EntriesController extends Controller {
 		$entries->update($request->all());
 
 		return redirect('user');
+	}
+	public function destroy($id, EntryRequest $request)
+	{
+
+		// $entries = Entry::findOrFail($id);
+
+		// $entries->update($request->all());
+
+		// return redirect('user');
 	}
 }

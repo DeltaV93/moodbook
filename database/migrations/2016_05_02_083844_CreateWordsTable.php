@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class AddExcerptToEntriesTable extends Migration
+class CreateWordsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -12,9 +12,11 @@ class AddExcerptToEntriesTable extends Migration
      */
     public function up()
     {
-        Schema::table('entries', function (Blueprint $table) 
-        {
-            $table->text('excerpt');
+        Schema::create('words', function (Blueprint $table) {
+            $table->increments('id');
+            $table->string('word')->unique();
+            $table->string('value');
+            $table->timestamps();
         });
     }
 
@@ -25,9 +27,6 @@ class AddExcerptToEntriesTable extends Migration
      */
     public function down()
     {
-        Schema::table('entries', function (Blueprint $table) 
-        {
-            $table->dropColumn('excerpt');
-        });
+        Schema::drop('words');
     }
 }

@@ -25,7 +25,7 @@ class EntryRequest extends Request
     {
         return [
             'entry_title' => 'required',
-            'body_entry' => 'required'
+            'entry_body' => 'required'
         ];
     }
 }

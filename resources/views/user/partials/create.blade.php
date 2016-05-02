@@ -13,22 +13,30 @@
 </div>
 
 <!--   -->
-<div id="toolbar">
+<!-- <div id="toolbar">
   <a data-wysihtml5-command="bold">bold</a>
   <a data-wysihtml5-command="italic">italic</a>
   <a data-wysihtml5-command="formatBlock" data-wysihtml5-command-value="h1">H1</a>
   <a data-wysihtml5-command="formatBlock" data-wysihtml5-command-value="p">P</a>
-</div>
+</div> -->
 <!-- <form id="">
     <textarea id="textarea" placeholder="Enter your text ..." autofocus></textarea>
 </form> -->
 
 
 <div class="container">
-
+@if (count($errors) > 0)
+    <div class="alert alert-danger">
+        <ul>
+            @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+    </div>
+@endif  
 	<div class="editable--textarea">
  		<div class="col-sm-12">
-			{!! Form::textarea('body_entry', null, ['class' => 'editable--textarea text-box col-md-12 opensans', 'id' =>'textarea', 'placeholder' => 'Enter your text here.','style'=>"width:100%"]) !!}
+			{!! Form::textarea('entry_body', null, ['class' => 'editable--textarea text-box col-md-12 opensans', 'id' =>'textarea', 'placeholder' => 'Enter your text here.','style'=>"width:100%"]) !!}
 		</div>
 	</div>
 	<div class="editable--tag_field">
