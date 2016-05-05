@@ -73,12 +73,6 @@ class EntriesController extends Controller {
 		// THIS GIVES ME AN EMPTY ARRAY 
 		// $words = DB::table('words')->where('word', '=', $entry_text)->get();
 
-			// ->whereExists(function ($entry_explode) {
-			// 	$entry_explode->select(DB::raw(1))
-			// 		->from('words')
-			// 		->whereRaw('word = word');
-			// })
-			// ->get();
 
 		$word_test = Words::whereRaw("MATCH(",$entry_explode,") AGINST(?)", array($words));
 		// $words = 
