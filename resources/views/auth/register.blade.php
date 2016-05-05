@@ -24,16 +24,18 @@
                         <input type="text" class="col-md-12 form-control defult--input" name="first_name" value="{{ old('first_name') }}">
                     </div>
                 </div>
-                    <div class="col-md-6 form-group form-group--siginup">
-                        <div class="col-md-3 login--label">
-                            
-                            <label class="col-md-4 control-label">Last Name:</label>
-                        </div>
 
-                        <div class="col-md-5 signup--sm">
-                            <input type="text" class="col-md-12 form-control defult--input" name="last_name" value="{{ old('last_name') }}">
-                        </div>
+                <div class="col-md-6 form-group form-group--siginup">
+                    <div class="col-md-3 login--label">
+                        
+                        <label class="col-md-4 control-label">Last Name:</label>
                     </div>
+
+                    <div class="col-md-5 signup--sm">
+                        <input type="text" class="col-md-12 form-control defult--input" name="last_name" value="{{ old('last_name') }}">
+                    </div>
+                </div>
+                
                     <div class="col-md-12 form-group form-group--siginup">
                         <div class="col-md-1 col-sm-offset-2 login--label">
                             
@@ -68,7 +70,7 @@
                             </button>
                         </div>
                     </div>
-<p class="light italic opensans login--signup">LOGIN WITH FACEBOOK <a href="redirect/facebook"> Click here</a></p>
-<p class="light italic opensans login--signup">LOGIN WITH twitter <a href="redirect/twitter"> Click here</a></p>
+<!-- <p class="light italic opensans login--signup">LOGIN WITH FACEBOOK <a href="redirect/facebook"> Click here</a></p>
+<p class="light italic opensans login--signup">LOGIN WITH twitter <a href="redirect/twitter"> Click here</a></p> -->
     </form>
 @endsection

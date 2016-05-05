@@ -30,7 +30,8 @@
 						<a href=""><span class="glyphicon glyphicon-trash" aria-hidden="true"></a></span>
 					</li>
 					<li>
-						<a href=""><span class="glyphicon glyphicon-edit" aria-hidden="true"></a></span>
+					<!-- FIND THE RIGHT WAY TO PUT IN URL -->
+						<a href="user/edit{{'/'.$entries->id}}"><span class="glyphicon glyphicon-edit" aria-hidden="true"></a></span>
 					</li>
 					<li>
 						<a href=""><span class="glyphicon glyphicon-option-horizontal" aria-hidden="true"></a></span>
@@ -57,7 +58,7 @@
 					<h3 class="entry_view--identifier__author light">Created By</h3>	
 				</div>
 				<div class="col-sm-7 entry_view--identifier__body">
-					<p class="light opensans">{{ $entries->body_entry }}</p>
+					<p class="light opensans">{{ $entries->entry_body }}</p>
 
 
 <!-- 
