@@ -49,7 +49,7 @@ class EntriesController extends Controller {
 	public function store(EntryRequest $request)
 	{
 
-		Entry::create($request->all());
+		$entry = Entry::create($request->all());
 
 		// GETTING THE ARRY OF WORDS FROM entry_body( $entry_text)
 		$entry_text = $request->only('entry_body');
@@ -70,16 +70,6 @@ class EntriesController extends Controller {
 		foreach($matched_words as $matched_word){
 				$value_array[$matched_word->word]=$matched_word->value;
 		}
-
-		// ONE WAY TO GET UNSAVED WORDS
-		// $arrayOfWords = array();
-		// foreach ($entry_explode as $word) {
-		//     if (in_array($word,$new_array)) {
-		//         $arrayOfWords['yes_words'][] = $word;
-		//     } else {
-		//     	$arrayOfWords['no_word'] = $word;
-		//     }
-		// }
 
 		$output = [];
 
@@ -120,10 +110,37 @@ class EntriesController extends Controller {
 		foreach ($big_num as $color_number) {
 			$color_gradient_stops[] = toColor($color_number);
 		}
-		return $color_gradient_stops;
+		// return $color_gradient_stops;
 
 		// SAVE THIS AS ENTRY_COLOR IN ENTRY DB
-		// $color_gradient = 	
+		$color_1 = Entry::where('entry_color_1');
+		$color_2 = Entry::where('entry_color_2');
+		$color_3 = Entry::where('entry_color_3');
+
+		// foreach ($color_gradient_stops as $color) {
+			// check to see if color_1 in DB is empty
+			// if empty save to color_1 
+			// if not ...
+
+			if($entry->entry_color_1 == null ){
+				$entry->entry_color_1 = $color_gradient_stops[0];
+			}
+			if($entry->entry_color_2 == null ){
+				$entry->entry_color_2 = $color_gradient_stops[1];
+			}
+			if($entry->entry_color_3 == null ){
+				$entry->entry_color_3 = $color_gradient_stops[2];
+			}
+			$entry->save();
+
+			$entry->touch();
+
+			// if color_2 is empty save here 
+			// elseif(){
+
+			// }
+			// if color_1 && color_2 is full save in color_3
+		// }
 		
 		
 		return redirect('user');

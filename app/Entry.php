@@ -10,7 +10,9 @@ class Entry extends Model
 {
     protected $fillable = [
     	'entry_title',
-    	'entry_color',
+    	'entry_color_1',
+        'entry_color_2',
+        'entry_color_3',
     	'entry_body',
     	'tag_field',
     	'user_id' //temp
