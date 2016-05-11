@@ -102,7 +102,7 @@ class EntriesController extends Controller {
 		return $three_chunks;
 	
 
-		// $color = [];
+		$color = [];
 		// foreach ($three_chunks as $chunk){
 		// 	dd(array_sum($chunk));
 		// }
