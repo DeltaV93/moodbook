@@ -64,40 +64,57 @@ class EntriesController extends Controller {
 		// COUNT THE LENTH OF THE WORDS AND DIVIDE IT BY 3
 		$entry_lenth = count($entry_explode);
 
-		// EACH WORD GET ANALAYZED 
-		$words = DB::table('words')->get();
+		$new_array = array();
+		// EACH WORD GETS ANALAYZED 
+		$matched_words = Words::whereIn('word', $entry_explode)->get();
+		foreach($matched_words as $mw){
+				$new_array[]=$mw->word;
+				$value_array[$mw->word]=$mw->value;
+		}
 
-		// $words = DB::table('words')->get();
-		// Article::whereRaw("MATCH(title,body) AGAINST(?)", array('first'));
+		$arrayOfWords = array();
+		foreach ($entry_explode as $word) {
+		    if (in_array($word,$new_array)) {
+		        $arrayOfWords['yes_words'][] = $word;
+		    } else {
+		    	$arrayOfWords['no_word'] = $word;
+		    }
+		}
 
-		// THIS GIVES ME AN EMPTY ARRAY 
-		// $words = DB::table('words')->where('word', '=', $entry_text)->get();
 
+		// return $arrayOfWords['no_word'];
+		$entry_math = number_format($entry_lenth / 3);
 
-		$word_test = Words::whereRaw("MATCH(",$entry_explode,") AGINST(?)", array($words));
-		// $words = 
+			
+		$your_input = array_chunk($entry_explode, $entry_math);
+
+		$output = [];
+// intval($n*100)
+		foreach($your_input as $chunk) 
+		    foreach($chunk as $string)
+		        if(array_key_exists(strtolower($string), $value_array))
+		            $output[strtolower($string)] = floatval($value_array[strtolower($string)]);
+		       	// elseif (array_key_exists(strtolower($string), $arrayOfWords))
+		       	// 	$output[strtolower($string)] = -1;
+		       	else 
+		       		$output[strtolower($string)] = -1;
+		       	
+		// echo "<pre>", print_r($output), "</pre>";
 		
-		dd($word_test);
 
+		// $output_chunked = array_chunk($output, $entry_math);
 
-		#find a match in words_row
-		// $words = Words::table('words')->get();
+		$number_chunks = array_chunk($output, $entry_math);	
+		return $number_chunks;
 
-		#return the values needed for that word in db 
-		# # If nothing is found give it a negative value
-
-
-		# rounding up for all number but need to thow this into a if statment 
-		# to only round up based on the %
-		$entry_math = round($entry_lenth / 3);
-		
-		
-		// dd($words);
-		// dd($entry_math);		
-
+		foreach ($number_chunks as $chunk) {
+			// dd(array_sum($chunk));
+		}
 		// FIND WHAT GROUP HAS MORE POSTIVE, NEGATIVE, OR NURTUAL SCORE 
 		
-		// INCREASE EACH COLOR POINT BASED ON THE NUMBER IT HAS *USE COLOR GIST FROM TREVOR GITHUB*
+		// INCREASE EACH COLOR POINT BASED ON THE NUMBER IT HAS *USE COLOR GIST 
+		// FROM TREVOR GITHUB*
+		
 		
 		// SAVE THIS AS ENTRY_COLOR IN ENTRY DB
 		

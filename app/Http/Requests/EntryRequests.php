@@ -18,6 +18,7 @@ class EntryRequests extends Request
 
     /**
      * Get the validation rules that apply to the request.
+     * think about if I want it to be just text
      *
      * @return array
      */
