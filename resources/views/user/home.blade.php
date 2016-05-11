@@ -60,9 +60,6 @@ ninak 'at' apple.com
 
 
 			@endforeach
-			/* Rectangle 44: */
-transform: rotate(90deg);
-background-image: linear-gradient(90deg, #11C7B8 0%, #1A5A78 90%);
 		</div>
 	</div>
 </div>
