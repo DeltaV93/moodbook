@@ -88,7 +88,7 @@ class EntriesController extends Controller {
 
 	    foreach($entry_explode as $word){
 	        if(array_key_exists(strtolower($word), $value_array)) {
-	        	$output[][strtolower($word)] = floatval($value_array[strtolower($word)]);
+	        	$output[strtolower($word)] = floatval($value_array[strtolower($word)]);
 	        } 
 	        else {
 	       		$output[strtolower($word)] = 0;
@@ -99,14 +99,16 @@ class EntriesController extends Controller {
 		
 		$three_chunks = array_chunk($output, $num_entries_in_a_chunk);	
 		
-		return $three_chunks;
-	
 
 		$color = [];
-		// foreach ($three_chunks as $chunk){
-		// 	dd(array_sum($chunk));
-		// }
 		
+		foreach ($three_chunks as $chunks) {
+			$color[] = array_sum($chunks);
+		}
+		print_r($color);
+		exit;
+
+
 		// FIND WHAT GROUP HAS MORE POSTIVE, NEGATIVE, OR NURTUAL SCORE 
 		
 		// INCREASE EACH COLOR POINT BASED ON THE NUMBER IT HAS *USE COLOR GIST 
