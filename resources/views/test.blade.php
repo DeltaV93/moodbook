@@ -15,7 +15,9 @@ function toColor($n){
 $nums = array(1, 0, 1,3,3,3,3,2,3,1,1,2,3);
 
 $sum = array_sum($nums);
+
 $big_num = pow($sum, 5.5);
+
 echo $big_num;
 echo '<br>';
 echo '<br>';

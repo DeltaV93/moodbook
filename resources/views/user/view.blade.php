@@ -2,7 +2,7 @@
 @section('content')
 <div class="container">
 	<div id="wrapper">
-		<div id="sidebar-wrapper" class="entry_post--colorbox">
+		<div id="sidebar-wrapper"style="background-image: linear-gradient(-90deg, {{ $entries->entry_color_1 }} 1%, {{ $entries->entry_color_2 }} 51%, {{ $entries->entry_color_3 }} 100%);" class="entry_post--colorbox">
 		    <ul class="sidebar-nav">
 		        <li class="sidebar-brand"></li>
 		    </ul>

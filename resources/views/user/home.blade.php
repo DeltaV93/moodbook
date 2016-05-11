@@ -55,7 +55,7 @@ ninak 'at' apple.com
 			</div>
 			
 			<div class="col-md-3">
-				<div class="entry_post--colorbox pull-right col-md-1"></div>
+				<div class="entry_post--colorbox pull-right col-md-1" style="background-image: linear-gradient(-90deg, {{ $entry->entry_color_1 }} 1%, {{ $entry->entry_color_2 }} 51%, {{ $entry->entry_color_3 }} 100%);"></div>
 			</div>
 			@endforeach
 		</div>
