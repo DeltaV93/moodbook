@@ -71,6 +71,7 @@ class EntriesController extends Controller {
 				$value_array[$matched_word->word]=$matched_word->value;
 		}
 
+		// ONE WAY TO GET UNSAVED WORDS
 		// $arrayOfWords = array();
 		// foreach ($entry_explode as $word) {
 		//     if (in_array($word,$new_array)) {
@@ -79,10 +80,6 @@ class EntriesController extends Controller {
 		//     	$arrayOfWords['no_word'] = $word;
 		//     }
 		// }
-
-
-		// return $arrayOfWords['no_word'];
-
 
 		$output = [];
 
@@ -97,26 +94,36 @@ class EntriesController extends Controller {
 		
 		$num_entries_in_a_chunk = number_format($entry_lenth / 3);
 		
-		$three_chunks = array_chunk($output, $num_entries_in_a_chunk);	
+		$three_nums_chunks = array_chunk($output, $num_entries_in_a_chunk);	
 		
 
-		$color = [];
-		
-		foreach ($three_chunks as $chunks) {
-			$color[] = array_sum($chunks);
+		// FOR EACH CHUNK DO THE MATH ON EACH CHUNKS IN THREE_NUMS_CHUNKS
+		$chunk_array_sum = [];
+		foreach ($three_nums_chunks as $num_chunk) {
+			$chunk_array_sum[] = array_sum($num_chunk);
 		}
-		print_r($color);
-		exit;
 
+		// GET THE NUMBER FROM BEFORE AND DO THIS => $big_num = pow($sum, 5.5);
+		foreach ($chunk_array_sum as $num_sum) {;
+			$big_num[] = pow($num_sum, 5.5);
+		}
+			
+		
+		// FUNCTION TO CAL DEC TO HEX 	
+		
+		function toColor($n){
+			return("#".substr("000000".dechex($n),-6));
+		}
 
-		// FIND WHAT GROUP HAS MORE POSTIVE, NEGATIVE, OR NURTUAL SCORE 
-		
-		// INCREASE EACH COLOR POINT BASED ON THE NUMBER IT HAS *USE COLOR GIST 
-		// FROM TREVOR GITHUB*
-		
-		
+		// SET EACH ONE OF THOSE NUMERS TO COLORS THAT RUN THROUGHT toColor
+		$color_gradient_stops = [];
+		foreach ($big_num as $color_number) {
+			$color_gradient_stops[] = toColor($color_number);
+		}
+		return $color_gradient_stops;
+
 		// SAVE THIS AS ENTRY_COLOR IN ENTRY DB
-		
+		// $color_gradient = 	
 		
 		
 		return redirect('user');

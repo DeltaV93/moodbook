@@ -19,7 +19,9 @@
 // 
 // USER ACCOUNT ROUTING
 // 
-
+Route::get('/test', function() {
+    return view('test');
+});
 
 
 Route::get('/oldlogin', function() {
