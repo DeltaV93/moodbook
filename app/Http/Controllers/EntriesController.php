@@ -67,49 +67,46 @@ class EntriesController extends Controller {
 		$new_array = array();
 		// EACH WORD GETS ANALAYZED 
 		$matched_words = Words::whereIn('word', $entry_explode)->get();
-		foreach($matched_words as $mw){
-				$new_array[]=$mw->word;
-				$value_array[$mw->word]=$mw->value;
+		foreach($matched_words as $matched_word){
+				$value_array[$matched_word->word]=$matched_word->value;
 		}
 
-		$arrayOfWords = array();
-		foreach ($entry_explode as $word) {
-		    if (in_array($word,$new_array)) {
-		        $arrayOfWords['yes_words'][] = $word;
-		    } else {
-		    	$arrayOfWords['no_word'] = $word;
-		    }
-		}
+		// $arrayOfWords = array();
+		// foreach ($entry_explode as $word) {
+		//     if (in_array($word,$new_array)) {
+		//         $arrayOfWords['yes_words'][] = $word;
+		//     } else {
+		//     	$arrayOfWords['no_word'] = $word;
+		//     }
+		// }
 
 
 		// return $arrayOfWords['no_word'];
-		$entry_math = number_format($entry_lenth / 3);
 
-			
-		$your_input = array_chunk($entry_explode, $entry_math);
 
 		$output = [];
-// intval($n*100)
-		foreach($your_input as $chunk) 
-		    foreach($chunk as $string)
-		        if(array_key_exists(strtolower($string), $value_array))
-		            $output[strtolower($string)] = floatval($value_array[strtolower($string)]);
-		       	// elseif (array_key_exists(strtolower($string), $arrayOfWords))
-		       	// 	$output[strtolower($string)] = -1;
-		       	else 
-		       		$output[strtolower($string)] = -1;
-		       	
-		// echo "<pre>", print_r($output), "</pre>";
-		
 
-		// $output_chunked = array_chunk($output, $entry_math);
-
-		$number_chunks = array_chunk($output, $entry_math);	
-		return $number_chunks;
-
-		foreach ($number_chunks as $chunk) {
-			// dd(array_sum($chunk));
+	    foreach($entry_explode as $word){
+	        if(array_key_exists(strtolower($word), $value_array)) {
+	        	$output[][strtolower($word)] = floatval($value_array[strtolower($word)]);
+	        } 
+	        else {
+	       		$output[strtolower($word)] = 0;
+		    }
 		}
+		
+		$num_entries_in_a_chunk = number_format($entry_lenth / 3);
+		
+		$three_chunks = array_chunk($output, $num_entries_in_a_chunk);	
+		
+		return $three_chunks;
+	
+
+		$color = [];
+		// foreach ($three_chunks as $chunk){
+		// 	dd(array_sum($chunk));
+		// }
+		
 		// FIND WHAT GROUP HAS MORE POSTIVE, NEGATIVE, OR NURTUAL SCORE 
 		
 		// INCREASE EACH COLOR POINT BASED ON THE NUMBER IT HAS *USE COLOR GIST 
