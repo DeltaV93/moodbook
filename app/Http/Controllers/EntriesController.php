@@ -72,18 +72,22 @@ class EntriesController extends Controller {
 		}
 
 		$output = [];
-
+		// FIND EACH WORDS VALUE AND PUT IT IN AN ARRAY 
 	    foreach($entry_explode as $word){
 	        if(array_key_exists(strtolower($word), $value_array)) {
-	        	$output[strtolower($word)] = floatval($value_array[strtolower($word)]);
+	        	$output[strtolower($word)] = 
+	        	floatval($value_array[strtolower($word)]);
 	        } 
+		// IF THE WORD DOES NOT HAVE A VALUE THAN MAKE IT 0
 	        else {
 	       		$output[strtolower($word)] = 0;
 		    }
 		}
 		
+		// FIND OUT HOW MANY WORDS ARE IN THE ARRAY AND / 3 TO MAKE 3 GROUPS
 		$num_entries_in_a_chunk = number_format($entry_lenth / 3);
 		
+		// MAKE THE 3 GROUPS WITH THE AMOUNT OF WORDS FROM LAST LINE
 		$three_nums_chunks = array_chunk($output, $num_entries_in_a_chunk);	
 		
 
@@ -93,7 +97,8 @@ class EntriesController extends Controller {
 			$chunk_array_sum[] = array_sum($num_chunk);
 		}
 
-		// GET THE NUMBER FROM BEFORE AND DO THIS => $big_num = pow($sum, 5.5);
+		// GET THE NUMBER FROM BEFORE AND DO THIS 
+		// => $big_num = pow($sum, 5.5(BLUE) OR 6.5(GREEN));
 		foreach ($chunk_array_sum as $num_sum) {;
 			$big_num[] = pow($num_sum, 5.5);
 		}
@@ -110,39 +115,20 @@ class EntriesController extends Controller {
 		foreach ($big_num as $color_number) {
 			$color_gradient_stops[] = toColor($color_number);
 		}
-		// return $color_gradient_stops;
 
-		// SAVE THIS AS ENTRY_COLOR IN ENTRY DB
-		$color_1 = Entry::where('entry_color_1');
-		$color_2 = Entry::where('entry_color_2');
-		$color_3 = Entry::where('entry_color_3');
+		if($entry->entry_color_1 == null ){
+			$entry->entry_color_1 = $color_gradient_stops[0];
+		}
+		if($entry->entry_color_2 == null ){
+			$entry->entry_color_2 = $color_gradient_stops[1];
+		}
+		if($entry->entry_color_3 == null ){
+			$entry->entry_color_3 = $color_gradient_stops[2];
+		}
+		$entry->save();
 
-		// foreach ($color_gradient_stops as $color) {
-			// check to see if color_1 in DB is empty
-			// if empty save to color_1 
-			// if not ...
+		$entry->touch();
 
-			if($entry->entry_color_1 == null ){
-				$entry->entry_color_1 = $color_gradient_stops[0];
-			}
-			if($entry->entry_color_2 == null ){
-				$entry->entry_color_2 = $color_gradient_stops[1];
-			}
-			if($entry->entry_color_3 == null ){
-				$entry->entry_color_3 = $color_gradient_stops[2];
-			}
-			$entry->save();
-
-			$entry->touch();
-
-			// if color_2 is empty save here 
-			// elseif(){
-
-			// }
-			// if color_1 && color_2 is full save in color_3
-		// }
-		
-		
 		return redirect('user');
 
 	}
