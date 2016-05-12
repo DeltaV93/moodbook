@@ -6,6 +6,7 @@
  */
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 @import url(https://fonts.googleapis.com/css?family=Raleway:200italic,400,300,700italic|Open+Sans:400,300);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,400italic);
 html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
@@ -5759,11 +5760,8 @@ button.close {
   background-size: cover;
   height: 623px; }
 
-.jumbotron-intro--title, .jumbotron-intro--sub-title {
-  margin-left: 45px; }
-
 .jumbotron-intro--title {
-  margin-top: 150px; }
+  margin-top: 120px; }
 
 .jumbotron-video {
   background-color: #fff; }
@@ -5790,8 +5788,7 @@ button.close {
   background-image: linear-gradient(-180deg, #E85D5A 0%, #33014D 100%); }
 
 .testdrive-colorbox {
-  top: 2348px;
-  height: 550px;
+  height: 24rem;
   background-image: linear-gradient(-180deg, #FAF2D8 0%, #F0CCB7 20%, #7F9993 46%, #1E6D74 69%, #0B3134 93%); }
 
 .examples::before {
@@ -5805,90 +5802,53 @@ button.close {
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/1.moblie.png);
     background-size: cover; } }
 
-.jumbotron {
-  color: #fff;
-  font-family: 'Raleway', sans-serif; }
+html {
+  font-size: 16px; }
 
-.light {
-  font-weight: 300; }
-
-.italic {
-  font-style: italic;
-  color: #8C8A8A; }
-
-.opensans {
-  font-family: 'Open Sans', sans-serif; }
+body {
+  font-size: math-pow(1.25, 0)rem;
+  line-height: 1.5;
+  color: #000;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
 
 h1 {
-  font-size: 64px; }
+  font-size: math-pow(1.25, 5)rem; }
 
-p {
-  font-size: 16px;
-  font-family: 'Open Sans', sans-serif;
-  margin-bottom: 24px; }
+h2 {
+  font-size: math-pow(1.25, 4)rem; }
 
-.date__month {
-  font-size: 29px;
-  letter-spacing: 5.9px;
-  position: abosulte;
-  top: .375rem; }
+h3 {
+  font-size: math-pow(1.25, 3)rem; }
 
-.date__day {
-  font-size: 50px;
-  letter-spacing: 2.27px;
-  font-family: Raleway-BoldItalic;
-  top: -25px;
-  position: relative;
-  left: 10px; }
+h4 {
+  font-size: math-pow(1.25, 2)rem; }
 
-.date__year {
-  -webkit-transform: rotate(270deg);
-  transform: rotate(270deg);
-  font-family: OpenSans;
-  font-style: italic;
-  font-size: 36px;
-  letter-spacing: 7.33px;
-  position: absolute;
-  top: 30px;
-  left: 51px; }
+h5 {
+  font-size: math-pow(1.25, 1)rem; }
 
-.entry_post--identifier__title {
-  font-size: 2.125em; }
+h6 {
+  font-size: math-pow(1.25, 0)rem; }
 
-.entry_view--identifier__title {
-  font-size: 50px;
-  letter-spacing: 2.27px; }
+p, ul, ol {
+  font-size: 1rem;
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif; }
 
-.entry_view--identifier__author {
-  font-size: 18px;
-  font-family: OpenSansLight-Italic;
-  color: #8C8A8A;
-  letter-spacing: 3.66px; }
+.mega {
+  font-size: math-pow(1.25, 7)rem; }
 
-.entry_view--identifier__tags {
-  font-size: 15px;
-  color: #9B9B9B;
-  font-family: 'Raleway', sans-serif;
-  font-weight: 200;
-  font-style: italic; }
+.kilo {
+  font-size: math-pow(1.25, 6)rem; }
 
-.profile_header--usersname {
-  font-size: 27px;
-  color: #21252A;
-  letter-spacing: 5.49px; }
+small,
+.milli {
+  font-size: math-pow(1.25, -1)rem; }
 
-.created--timestamp {
-  font-size: 18px;
-  color: #8C8A8A;
-  letter-spacing: 3.66px; }
+.micro {
+  font-size: math-pow(1.25, -2)rem; }
 
-.edited--timestamp {
-  font-size: 12px;
-  color: #8C8A8A;
-  letter-spacing: 2.44px; }
-
-.settings--label {
-  font-size: 0.8125em; }
+.text__white {
+  color: #fff; }
 
 .text-box {
   border: 1px solid #979797;
@@ -6007,7 +5967,7 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
   padding-bottom: 20px; }
 
 .entry_post--colorbox {
-  /*background-image: linear-gradient(-180deg, #E85D5A 0%, #33014D 100%);*/
+  background-image: linear-gradient(-180deg, #E85D5A 0%, #33014D 100%);
   width: 103px;
   height: 205px; }
 
@@ -6125,12 +6085,104 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
 .date {
   width: 100%; }
 
-.btn-defult {
-  background: #000000;
-  font-family: Raleway-Regular;
-  font-size: 1.5em;
-  color: #FFFFFF;
-  letter-spacing: 8.14px; }
+.trans, .btn__primary {
+  transition: all .5s ease-out; }
+
+.btn__primary, .btn__secondary--outline, .btn__primary--link, .btn__success, .btn__success--outline, .btn__success--link, .btn__warning, .btn__warning--outline, .btn__warning--link, .btn__disabled, .btn__danger, .btn__danger--outline, .btn__danger--link {
+  display: inline-block;
+  padding: 8px 20px;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 1.15px;
+  text-transform: capitalize;
+  text-decoration: none;
+  white-space: nowrap;
+  background-color: transparent;
+  border-radius: 3px;
+  cursor: pointer; }
+
+.btn--block {
+  display: block;
+  width: 100%; }
+
+.btn__primary {
+  background-color: #F5A623;
+  border: 2px solid #F5A623;
+  color: #fff; }
+  .btn__primary:hover {
+    background-color: transparent;
+    color: #F5A623; }
+  .btn__primary:focus {
+    outline: none; }
+
+.btn__secondary--outline {
+  border: 2px solid #fff;
+  color: #fff; }
+  .btn__secondary--outline:hover {
+    background-color: #fff;
+    color: #000; }
+
+.btn__primary--link {
+  color: #33C3F0;
+  border: 1px solid transparent; }
+  .btn__primary--link:after {
+    content: "→";
+    font-size: 14px; }
+
+.btn__success {
+  background-color: #1CC484;
+  border: 1px solid #1CC484;
+  color: #fff; }
+
+.btn__success--outline {
+  border: 1px solid #1CC484;
+  color: #1CC484; }
+
+.btn__success--link {
+  color: #1CC484;
+  border: 1px solid transparent; }
+  .btn__success--link:after {
+    content: "→";
+    font-size: 14px; }
+
+.btn__warning {
+  background-color: #E3FA37;
+  border: 1px solid #E3FA37;
+  color: #fff; }
+
+.btn__warning--outline {
+  border: 1px solid #E3FA37;
+  color: #E3FA37; }
+
+.btn__warning--link {
+  color: #E3FA37;
+  border: 1px solid transparent; }
+  .btn__warning--link:after {
+    content: "→";
+    font-size: 14px; }
+
+.btn__disabled {
+  border: 2px solid #818a91;
+  color: #818a91; }
+  .btn__disabled:focus {
+    outline: none; }
+
+.btn__danger {
+  background-color: #818a91;
+  border: 1px solid #818a91;
+  color: #fff; }
+
+.btn__danger--outline {
+  border: 1px solid #F53D23;
+  color: #F53D23; }
+
+.btn__danger--link {
+  color: #F53D23;
+  border: 1px solid transparent; }
+  .btn__danger--link:after {
+    content: "→";
+    font-size: 14px; }
 
 .navbar-default {
   background: #FFFFFF;

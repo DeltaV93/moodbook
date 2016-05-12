@@ -1,6 +1,4 @@
-<!-- Tem -->
-{!! Form::hidden('user_id',1) !!}
-<!--  -->
+
 		<div class="col-xs-12 col-sm-12 col-md-12  col-lg-12 ">
 			{!! Form::text('entry_title', null, ['class' => 'form-control editable--title', 'placeholder'=>'Untilted']) !!}
 		</div>

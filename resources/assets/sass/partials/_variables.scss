@@ -1,0 +1,37 @@
+// MOODBOOK BRANDING
+// ========================================== */
+
+// Color Palette
+$brand-primary: #F5A623;
+$brand-success: #1CC484;
+$brand-info:    #2372F5;
+$brand-warning: #E3FA37;   
+$brand-danger:  #F53D23;
+
+// Grayscale Palette
+$gray-light:    #818a91;
+$gray:          #55595c;
+$gray-dark:     #373a3c;
+
+// Basic Colors 
+$white: #fff;
+$black: #000;
+
+// Font Stack
+$font-family-base: "Raleway-Regular", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-family-sans: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif; 
+
+// Font Options:
+$font-smoothing: true;
+$font-rendering: false;
+
+// DOM SCAFFOLD
+// ========================================== */
+
+// Html <html/>
+$font-size-root: 16px;
+
+// Body <body/>
+$body-bg: #fff;
+$line-height: 1.6;
+$font-size-base: 1rem;

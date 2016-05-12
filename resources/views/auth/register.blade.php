@@ -65,7 +65,7 @@
                                     
                     <div class="form-group">
                         <div class="col-md-2 col-md-offset-8 form-button">
-                            <button type="submit" class="btn btn-defult defult--input form-control">
+                            <button type="submit" class="btn__primary ">
                                 <i class="fa fa-btn fa-user"></i>Register
                             </button>
                         </div>

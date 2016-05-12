@@ -1,4 +1,10 @@
+// Bootstrap Styles
 @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+
+// Main Crew
+// @import "normalize";
+@import "partials/variables";
+
 @import "partials/helpers";
 @import "partials/homepage";
 @import "partials/fonts";

@@ -37,11 +37,12 @@
             </div>
 
             <p class="light italic opensans login--signup">Need to sign up? <a href="/register"> Click here</a></p>
+            <a class="btn btn-link light italic opensans" href="{{ url('/password/reset') }}">Forgot Your Password?</a>
 <!--             <p class="light italic opensans login--signup">LOGIN WITH FACEBOOK <a href="redirect/facebook"> Click here</a></p>
             <p class="light italic opensans login--signup">LOGIN WITH twitter <a href="redirect/twitter"> Click here</a></p> -->
 
             <div class="form-group">
-                <div class="col-md-2 col-md-offset-7">
+                <div class="col-md-2 col-md-offset-2">
                     <div class="checkbox">
                         <label>
                             <input type="checkbox" name="remember"> Remember Me
@@ -52,11 +53,11 @@
 
             <div class="form-group">
                 <div class="col-md-2 col-md-offset-7">
-                    <button type="submit" class="btn btn-defult form-control defult--input defult--button">
+                    <button type="submit" class=" btn__primary">
                         <i class="fa fa-btn fa-sign-in"></i>Login
                     </button>
 
-                    <a class="btn btn-link" href="{{ url('/password/reset') }}">Forgot Your Password?</a>
+                    
                 </div>
             </div>
         </form>

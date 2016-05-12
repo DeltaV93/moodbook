@@ -14,7 +14,7 @@
 				<div class="con-sm-6 pull-left">
 					<ul class="list-unstyled">
 						<li>
-							<a href="/user"><span class="glyphicon glyphicon-menu-left" aria-hidden="true"></a></span>
+							<a href="{{ url('/user') }}"><span class="glyphicon glyphicon-menu-left" aria-hidden="true"></a></span>
 						</li>
 					</ul>
 				</div>
@@ -31,7 +31,7 @@
 					</li>
 					<li>
 					<!-- FIND THE RIGHT WAY TO PUT IN URL -->
-						<a href="user/edit{{'/'.$entries->id}}"><span class="glyphicon glyphicon-edit" aria-hidden="true"></a></span>
+						<a href="{{url('user/edit').'/'.$entries->id}}"><span class="glyphicon glyphicon-edit" aria-hidden="true"></a></span>
 					</li>
 					<li>
 						<a href=""><span class="glyphicon glyphicon-option-horizontal" aria-hidden="true"></a></span>
@@ -45,9 +45,9 @@
 		<div class="container">
 			<div class="row date">
 				<div class="col-md-6 entry_view--date pull-right">
-					<p class="date__month">May</p>
-					<p class="date__day">13</p>
-					<p class="date__year">2016</p>			
+					<p>May</p>
+					<p>13</p>
+					<p>2016</p>			
 				</div>
 			</div>
 		</div>	
