@@ -8,13 +8,15 @@ use App\Words;
 
 use App\Http\Request;
 
+use App\Http\Controllers\Auth\AuthController;
+
 use Requests;
 
 use DB;
 
-use App\Http\Requests\EntryRequest;
+use Auth;
 
-// use Illuminate\Foundation\Validation\ValidatesRequests;
+use App\Http\Requests\EntryRequest;
 
 use Carbon\Carbon;
 
@@ -23,9 +25,11 @@ class EntriesController extends Controller {
 
 	public function index()
 	{
-		// Auth::user();
-		
-		$entries = Entry::orderBy('created_at', 'desc')->get();
+
+		// MAKES THE RELATIONSHIP BETWEEN USER AND ENTRY 
+			$entries = Auth::user()->entries()
+			->orderBy('created_at', 'desc')
+			->get();
 
 		return view('user.home', compact('entries'));
 	}
@@ -48,8 +52,10 @@ class EntriesController extends Controller {
 
 	public function store(EntryRequest $request)
 	{
+		$newEntry = new Entry($request->all());
 
-		$entry = Entry::create($request->all());
+		// MAKES THE RELATIONSHIP BETWEEN USER AND ENTRY 
+		$entry = Auth::user()->entries()->save($newEntry);
 
 		// GETTING THE ARRY OF WORDS FROM entry_body( $entry_text)
 		$entry_text = $request->only('entry_body');
