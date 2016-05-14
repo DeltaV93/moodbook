@@ -52,6 +52,7 @@ class EntriesController extends Controller {
 
 	public function store(EntryRequest $request)
 	{
+
 		$newEntry = new Entry($request->all());
 
 		// MAKES THE RELATIONSHIP BETWEEN USER AND ENTRY 

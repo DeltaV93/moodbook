@@ -56,4 +56,10 @@
 	</div>
 			<div class="col-sm-2 pull-right">
 				{!! Form::submit($submitButton, ['class' => 'btn btn-defult']) !!}
+				
 			</div>
+
+
+<a class="btn-primary btn save_btn">CATS NOW</a>
+
+

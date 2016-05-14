@@ -33,7 +33,30 @@
         {!! HTML::script('js/app.js') !!}
         {!! HTML::script('js/toolbar.js') !!}
         {!! HTML::script('js/advanced_and_extended.js') !!}
-        {!! HTML::script('js/editor.js') !!}
+        {!! HTML::script('js/editor.js') !!}}
+
+       
+<script src="https://code.jquery.com/jquery-2.2.3.min.js" integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo=" crossorigin="anonymous"></script>
+
+<script type="text/javascript">
+$(function(){
+
+    $(".save_btn").click(function(){
+        alert('cats');
+       $.ajax({
+            type: "STORE",
+            url: "user",
+            data: { 
+                text: "cat"
+            },
+            success: function(result){
+                console.log(result);
+            }
+        })
+    });
+
+
+});        
             
     </body>
 </html>
