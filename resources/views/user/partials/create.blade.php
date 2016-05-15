@@ -55,11 +55,11 @@
 			</div>
 	</div>
 			<div class="col-sm-2 pull-right">
-				{!! Form::submit($submitButton, ['class' => 'btn btn-defult']) !!}
+				{!! Form::submit($submitButton, ['class' => 'btn__primary']) !!}
 				
 			</div>
 
 
-<a class="btn-primary btn save_btn">CATS NOW</a>
+<!-- <a class="btn-primary btn save_btn">CATS NOW</a> -->
 
 

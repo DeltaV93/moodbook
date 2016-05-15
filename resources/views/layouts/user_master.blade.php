@@ -80,19 +80,19 @@
 
 
 // });        
-</script>   --}}
-<script type="text/javascript">
-$( ".moodbook--entry, ul, li, div" ).hover(function() {
-  $(this).addClass('text__white'),
-  $('.color').addClass('trans'),
-  $('.color').width(700);
+</script>   
 
-}); 
-$( ".moodbook--entry, ul, li, div" ).mouseout(function() {
-  $(this).removeClass('text__white');
-  $('.color').width(73.3);
+// $( ".moodbook--entry, ul, li, div" ).hover(function() {
+//   $(this).addClass('text__white'),
+//   $('.color').addClass('trans'),
+//   $('.color').width(700);
 
-});    
+// }); 
+// $( ".moodbook--entry, ul, li, div" ).mouseout(function() {
+//   $(this).removeClass('text__white');
+//   $('.color').width(73.3);
+
+// });    
 // $('.moodbook--entry').hover(function(){
 //     $(this).addClass('text__white'),
 //     $('div #color').addClass('tran'),
@@ -107,6 +107,6 @@ $( ".moodbook--entry, ul, li, div" ).mouseout(function() {
 // });
 
 
-</script>       
+// </script> --}}      
     </body>
 </html>
