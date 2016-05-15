@@ -25,33 +25,55 @@ class EntriesController extends Controller {
 
 	public function index()
 	{
+			$user = Auth::user()->get();
+			$first = Auth::user()->first_name;
+			$last = Auth::user()->first_name;
+			$bio = Auth::user()->user_bio;
+			$photo = Auth::user()->user_photo;
+			$fullname = $first.' '.$last;
 
 		// MAKES THE RELATIONSHIP BETWEEN USER AND ENTRY 
 			$entries = Auth::user()->entries()
 			->orderBy('created_at', 'desc')
 			->get();
-
-		return view('user.home', compact('entries'));
+		// dd($entries);
+		return view('user.home', compact('entries', 'fullname', 'bio','photo'));
 	}
 
 	public function show($id)
 	{
+		$user = Auth::user()->get();
+		$first = Auth::user()->first_name;
+		$last = Auth::user()->first_name;
+		$bio = Auth::user()->user_bio;
+		$photo = Auth::user()->user_photo;
+		$fullname = $first.' '.$last;		
 		// dd('hey');
 		$entries = Entry::findOrFail($id);
 		// return $entries;
-		return view('user.view', compact('entries'));
+		return view('user.view', compact('entries', 'fullname'));
 		
 	}
 
 	public function create()
 	{
+		// $user = Auth::user()->get();
+		$first = Auth::user()->first_name;
+		$last = Auth::user()->first_name;
+		$fullname = $first.' '.$last;		
 		// $entries = Entry::all();
 
-		return view('user.create');
+		return view('user.create', compact('fullname'));
 	}
 
 	public function store(EntryRequest $request)
 	{
+		$user = Auth::user()->get();
+		$first = Auth::user()->first_name;
+		$last = Auth::user()->first_name;
+		$bio = Auth::user()->user_bio;
+		$photo = Auth::user()->user_photo;
+		$fullname = $first.' '.$last;		
 
 		$newEntry = new Entry($request->all());
 
@@ -136,25 +158,37 @@ class EntriesController extends Controller {
 
 		$entry->touch();
 
-		return redirect('user');
+		return redirect('user', 'fullname');
 
 	}
 	public function edit($id)
 	{
+		$user = Auth::user()->get();
+		$first = Auth::user()->first_name;
+		$last = Auth::user()->first_name;
+		$bio = Auth::user()->user_bio;
+		$photo = Auth::user()->user_photo;
+		$fullname = $first.' '.$last;		
 		// dd('hey');
 		$entries = Entry::findOrFail($id);
 
-		return view('user.edit', compact('entries'));
+		return view('user.edit', compact('entries', 'fullname'));
 
 	}
 	public function update($id, EntryRequest $request)
 	{
+		$user = Auth::user()->get();
+		$first = Auth::user()->first_name;
+		$last = Auth::user()->first_name;
+		$bio = Auth::user()->user_bio;
+		$photo = Auth::user()->user_photo;
+		$fullname = $first.' '.$last;		
 
 		$entries = Entry::findOrFail($id);
 
 		$entries->update($request->all());
 
-		return redirect('user');
+		return redirect('user', 'fullname');
 	}
 	public function destroy($id, EntryRequest $request)
 	{

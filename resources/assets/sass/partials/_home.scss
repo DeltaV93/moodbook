@@ -8,6 +8,41 @@
 //         src: url('../fonts/fontawesome-webfont.eot');
 //         src: url('../fonts/fontawesome-webfont.eot?#iefix') format('embedded-opentype'),       url('../fonts/glyphicons-halflings-regular.woff') format('woff'),        url('../fonts/glyphicons-halflings-regular.ttf') format('truetype'),       url('../fonts/glyphicons-halflings-regular.svg#glyphicons-halflingsregular') format('svg');
 // }
+// 
+.newEntry {
+	left: 195px;
+	border: lightgray 2.8px solid;
+	top: 13px;
+	border-radius: 17px;	
+	padding-top: 9px;
+	color: $brand-primary;
+    font-size: 30px;
+    top: 9px;
+    position: absolute;	
+}
+.color {
+    width: 700px;
+    z-index: -1;
+    position: absolute;	
+}
+.color__full{
+	&:hover{
+	 @extend .trans;
+	  width: 100%;
+	}	
+	
+}
+.moodbook--entry{
+    padding-bottom: 40px;
+    width: 642px;
+}
+
+.moodbook--entry ul {
+	margin-top: 50px;
+}
+.moodbook--words {
+	margin-top: 50px;
+}
 .profile_header_colorbox {
 	background-image: linear-gradient(-90deg, #FCD6C3 1%, #E98397 51%, #19224F 100%);
 }

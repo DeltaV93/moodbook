@@ -27,6 +27,14 @@ class Entry extends Model
     {
     	return $this->belongsTo('App\User');
     }
+
+    /**
+     * The storage format of the enties date columns.
+     *
+     * @var string
+     */
+        
+    
 }
 
 

@@ -8,17 +8,20 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
+
       <a class="brandLogo navbar-brand " href="/">MoodBook</a>
+      <a class="brandLogo navbar-brand newEntry" href="{{ url('user/create') }}">+</a>
     </div>
+
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 
       <ul class="nav navbar-nav navbar-right">
-        <li><a class="navbar-items" href="{{ url('user/create') }}">New Entry</a></li>
-        <li><a class="navbar-items" href="{{ url('/user')}}">Username</a></li>
+        <li><a class="navbar-items" href="{{ url('/user')}}">{{ $fullname }}</a></li>
         <li><a class="navbar-items" href="{{ url('/logout')}}">Logout</a></li>
       </ul>
     </div><!-- /.navbar-collapse -->
+
   </div><!-- /.container-fluid -->
 </nav>

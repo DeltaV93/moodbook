@@ -5940,6 +5940,35 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
   src: url("../fonts/glyphicons-halflings-regular.eot");
   src: url("../fonts/glyphicons-halflings-regular.eot?#iefix") format("embedded-opentype"), url("../fonts/glyphicons-halflings-regular.woff") format("woff"), url("../fonts/glyphicons-halflings-regular.ttf") format("truetype"), url("../fonts/glyphicons-halflings-regular.svg#glyphicons-halflingsregular") format("svg"); }
 
+.newEntry {
+  left: 195px;
+  border: lightgray 2.8px solid;
+  top: 13px;
+  border-radius: 17px;
+  padding-top: 9px;
+  color: #F5A623;
+  font-size: 30px;
+  top: 9px;
+  position: absolute; }
+
+.color {
+  width: 700px;
+  z-index: -1;
+  position: absolute; }
+
+.color__full:hover {
+  width: 100%; }
+
+.moodbook--entry {
+  padding-bottom: 40px;
+  width: 642px; }
+
+.moodbook--entry ul {
+  margin-top: 50px; }
+
+.moodbook--words {
+  margin-top: 50px; }
+
 .profile_header_colorbox {
   background-image: linear-gradient(-90deg, #FCD6C3 1%, #E98397 51%, #19224F 100%); }
 
@@ -6085,7 +6114,7 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
 .date {
   width: 100%; }
 
-.trans, .btn__primary {
+.trans, .color__full:hover, .btn__primary {
   transition: all .5s ease-out; }
 
 .btn__primary, .btn__secondary--outline, .btn__primary--link, .btn__success, .btn__success--outline, .btn__success--link, .btn__warning, .btn__warning--outline, .btn__warning--link, .btn__disabled, .btn__danger, .btn__danger--outline, .btn__danger--link {

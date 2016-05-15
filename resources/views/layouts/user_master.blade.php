@@ -31,32 +31,82 @@
         
         {{-- APP SCRIPTS --}}
         {!! HTML::script('js/app.js') !!}
-        {!! HTML::script('js/toolbar.js') !!}
+        {{--!! HTML::script('js/toolbar.js') !!}
         {!! HTML::script('js/advanced_and_extended.js') !!}
-        {!! HTML::script('js/editor.js') !!}}
+        {!! HTML::script('js/editor.js') !!--}}
 
        
 <script src="https://code.jquery.com/jquery-2.2.3.min.js" integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo=" crossorigin="anonymous"></script>
 
+{{--<script type="text/javascript">
+// var autosaveOn = false;
+// function myAutosavedTextbox_onTextChanged()
+// {
+//     if (!autosaveOn)
+//     {
+//         autosaveOn = true;
+
+//         $('#myAutosavedTextbox').everyTime("300000", function(){
+//             alert('hey');
+//              $.ajax({
+//                  type: "STORE",
+//                  url: "user",
+//                  data: {
+//                     entry_body: ""
+//                  }
+//                  success: function(msg) {
+//                      $('#autosavenotify').text(msg);
+//                  }
+//              });
+//         }); //closing tag
+//     }
+// }
+
+// $(function(){
+
+//     $(".save_btn").click(function(){
+//         // alert('cats');
+//        $.ajax({
+//             type: "STORE",
+//             url: "user",
+//             data: { 
+//                 text: "cat"
+//             },
+//             success: function(result){
+//                 console.log(result);
+//             }
+//         })
+//     });
+
+
+// });        
+</script>   --}}
 <script type="text/javascript">
-$(function(){
+$( ".moodbook--entry, ul, li, div" ).hover(function() {
+  $(this).addClass('text__white'),
+  $('.color').addClass('trans'),
+  $('.color').width(700);
 
-    $(".save_btn").click(function(){
-        alert('cats');
-       $.ajax({
-            type: "STORE",
-            url: "user",
-            data: { 
-                text: "cat"
-            },
-            success: function(result){
-                console.log(result);
-            }
-        })
-    });
+}); 
+$( ".moodbook--entry, ul, li, div" ).mouseout(function() {
+  $(this).removeClass('text__white');
+  $('.color').width(73.3);
+
+});    
+// $('.moodbook--entry').hover(function(){
+//     $(this).addClass('text__white'),
+//     $('div #color').addClass('tran'),
+//     $('div #color').width(700);
+// }
+// );
+// 
+// $('.moodbook--entry ul li').hover(function () {
+//     // alert('hey');
+//     $(this).parent().siblings("#color").toggleClass('color__full'),
+//     // alert('hey');
+// });
 
 
-});        
-            
+</script>       
     </body>
 </html>
