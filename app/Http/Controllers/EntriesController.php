@@ -158,7 +158,7 @@ class EntriesController extends Controller {
 
 		$entry->touch();
 
-		return redirect('user', 'fullname');
+		return redirect('user');
 
 	}
 	public function edit($id)
@@ -188,12 +188,13 @@ class EntriesController extends Controller {
 
 		$entries->update($request->all());
 
-		return redirect('user', 'fullname');
+		return redirect('user');
 	}
 	public function destroy($id, EntryRequest $request)
 	{
+		$entries = Entry::findOrFail($id);
 
-		// $entries = Entry::findOrFail($id);
+		dd('HEY');
 
 		// $entries->update($request->all());
 

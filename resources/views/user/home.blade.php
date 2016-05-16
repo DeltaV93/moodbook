@@ -14,23 +14,24 @@
 	    </ul>
 	</div>
 
-<div class="col-sm-offset-2 col-sm-8">
+<div class="moodbook col-xs-8 col-md-offset-1 col-md-8">
 @foreach ($entries as $entry)
 <div class="moodbook--entry" {{--style="background-image: linear-gradient(-180deg, {{ $entry->entry_color_1 }} 0%, {{ $entry->entry_color_2 }} 51%, {{ $entry->entry_color_3 }} 100%);"--}}>
 	
 	<ul class="row list-unstyled">
 		<li>
-			<div id='color' class="color col-md-1 entry_post--colorbox pull right" style="background-image: linear-gradient(-180deg, {{ $entry->entry_color_1 }} 0%, {{ $entry->entry_color_2 }} 51%, {{ $entry->entry_color_3 }} 100%);"></div>		
+			<div class="moodbook--words col-xs-4 col-md-2">
+				{{ $entry->created_at->format('m/d/Y')}}
+			</div>				
 		</li>
 
 		<li>
-			<div class="moodbook--words col-lg-10 col-md-offset-2">
-				{{ $entry->created_at->format('m/d/Y')}}
+			<div class="col-xs-9 col-md-11 ">
+				<a class="" href="{{ url('user/show').'/'.$entry->id }}"><h2>{{ $entry->entry_title }}</h2></a>	
 			</div>
 		</li>
 		<li>
-			<div class="col-lg-10 col-md-offset-2">
-				<a class="" href="{{ url('user/show').'/'.$entry->id }}"><h2>{{ $entry->entry_title }}</h2></a>	
+			<div id='color' class="color col-xs-offset-10 col-xs-1 entry_post--colorbox pull right" style="background-image: linear-gradient(-180deg, {{ $entry->entry_color_1 }} 0%, {{ $entry->entry_color_2 }} 51%, {{ $entry->entry_color_3 }} 100%);">
 			</div>
 		</li>
 	</ul>

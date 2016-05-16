@@ -69,7 +69,7 @@
 
                 </div>
                     {!! Form::open() !!}
-                    {!! Form::textarea('testDriveText', null,['class' => 'text-box testdrive--textbox','id'=>'textarea','style'=>"width:100% col-md-3",'placeholder' => 'If you use postive words, you will get bright colors. Use negative words ... well you get the picture.']) !!}
+                    {!! Form::textarea('testDriveText', null,['class' => 'text-box ','id'=>'textarea','style'=>" col-xs-3",'placeholder' => 'If you use postive words, you will get bright colors. Use negative words ... well you get the picture.']) !!}
                 <div>
                     {!! Form::submit('Submit', ['class' => 'btn__primary']) !!}      
                 </div>  

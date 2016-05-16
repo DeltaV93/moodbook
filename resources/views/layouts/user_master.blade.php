@@ -38,7 +38,7 @@
        
 <script src="https://code.jquery.com/jquery-2.2.3.min.js" integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo=" crossorigin="anonymous"></script>
 
-{{--<script type="text/javascript">
+<script type="text/javascript">
 // var autosaveOn = false;
 // function myAutosavedTextbox_onTextChanged()
 // {
@@ -80,33 +80,34 @@
 
 
 // });        
+<!-- </script>   
+<script>
+ // $( ".moodbook--entry, ul, li, div" ).hover(function() {
+ //   $(this).addClass('text__white'),
+ //   $('.color').addClass('trans'),
+ //   $('.color').width(700);
+ // }); 
+ // $( ".moodbook--entry, ul, li, div" ).mouseout(function() {
+ //   $(this).removeClass('text__white');
+ //   $('.color').width(73.3);
+ // });    
+
+ // $('.moodbook--entry').hover(function(){
+ //    var entry = $(this);
+
+ //     entry.addClass('text__white');
+ //     $('.moodbook--entry .color').addClass('tran');
+ //     $(this+' #color').width(700);
+ // }
+ // );
+ 
+ // $('.moodbook--entry ul li').hover(function () {
+ //     // alert('hey');
+ //     $(this).parent().siblings("#color").toggleClass('color__full'),
+ //     // alert('hey');
+ // });
+
+
 </script>   
-
-// $( ".moodbook--entry, ul, li, div" ).hover(function() {
-//   $(this).addClass('text__white'),
-//   $('.color').addClass('trans'),
-//   $('.color').width(700);
-
-// }); 
-// $( ".moodbook--entry, ul, li, div" ).mouseout(function() {
-//   $(this).removeClass('text__white');
-//   $('.color').width(73.3);
-
-// });    
-// $('.moodbook--entry').hover(function(){
-//     $(this).addClass('text__white'),
-//     $('div #color').addClass('tran'),
-//     $('div #color').width(700);
-// }
-// );
-// 
-// $('.moodbook--entry ul li').hover(function () {
-//     // alert('hey');
-//     $(this).parent().siblings("#color").toggleClass('color__full'),
-//     // alert('hey');
-// });
-
-
-// </script> --}}      
     </body>
 </html>
