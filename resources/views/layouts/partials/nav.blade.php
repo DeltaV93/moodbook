@@ -8,7 +8,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="brandLogo navbar-brand " href="/">MoodBook</a>
+      <div><a class="brandLogo navbar-brand " href="/"><span class="text__primary heavy">Mood</span>Book</a></div>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->

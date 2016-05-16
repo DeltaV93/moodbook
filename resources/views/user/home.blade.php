@@ -24,12 +24,12 @@
 		</li>
 
 		<li>
-			<div class="moodbook--words col-lg-10 col-lg-offset-2">
+			<div class="moodbook--words col-lg-10 col-md-offset-2">
 				{{ $entry->created_at->format('m/d/Y')}}
 			</div>
 		</li>
 		<li>
-			<div class="col-lg-10 col-lg-offset-2">
+			<div class="col-lg-10 col-md-offset-2">
 				<a class="" href="{{ url('user/show').'/'.$entry->id }}"><h2>{{ $entry->entry_title }}</h2></a>	
 			</div>
 		</li>

@@ -9,8 +9,8 @@
         <span class="icon-bar"></span>
       </button>
 
-      <a class="brandLogo navbar-brand " href="/">MoodBook</a>
-      <a class="brandLogo navbar-brand newEntry" href="{{ url('user/create') }}">+</a>
+      <a class="brandLogo navbar-brand " href="/"><span class="text__primary heavy">Mood</span>Book</a>
+      <a class="brandLogo navbar-brand newEntry" href="{{ url('user/create') }}"><span class="text__primary">+</span></a>
     </div>
 
 

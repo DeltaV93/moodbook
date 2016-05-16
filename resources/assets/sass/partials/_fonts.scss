@@ -135,7 +135,9 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-//h1,h2,h3,h4,h5,h6 {}
+h1,h2,h3,h4,h5,h6 {
+  font-family: $font-family-base;
+}
 
 h1 { font-size: modular-scale(5); }
 h2 { font-size: modular-scale(4); }
@@ -166,4 +168,10 @@ small,
 
 .text__white {
 	color: $white;
+}
+.text__primary {
+  color: $brand-primary;
+}
+.heavy {
+  font-weight: 600;
 }

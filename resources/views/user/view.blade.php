@@ -1,78 +1,59 @@
 @extends('layouts.user_master')
 @section('content')
+
+<div class="containter-fluid" style="background-image: linear-gradient(-180deg, {{ $entries->entry_color_1 }} 0%, {{ $entries->entry_color_2 }} 51%, {{ $entries->entry_color_3 }} 100%);">
+		<h1 class="text-left text__white editable--title__view" style="background-image: linear-gradient(-180deg, {{ $entries->entry_color_1 }} 0%, {{ $entries->entry_color_2 }} 51%, {{ $entries->entry_color_3 }} 100%);">{{ $entries->entry_title }}</h1>
+</div>
+
+<div class="col-md-offset-5 moodbook--edit-bar">
+	<ul class="list-inline ">
+		<li><button class="btn__primary--outline">Edit</li>
+		<li><button class="btn__primary--outline">Share</li>
+		<li><button class="btn__primary--outline">Delete</li>
+	</ul>
+</div>
+	
+<!-- <div class="colorbox">
+	<div style="width: 100%; height: 241px; color: transparent; background-image: linear-gradient(-180deg, #E85D5A 0%, #33014D 100%);" class="entry_post--colorbox__create col-md-4"></div>
+</div> -->
+
+<!--   -->
+<!-- <div id="toolbar">
+  <a data-wysihtml5-command="bold">bold</a>
+  <a data-wysihtml5-command="italic">italic</a>
+  <a data-wysihtml5-command="formatBlock" data-wysihtml5-command-value="h1">H1</a>
+  <a data-wysihtml5-command="formatBlock" data-wysihtml5-command-value="p">P</a>
+</div> -->
+<!-- <form id="">
+    <textarea id="textarea" placeholder="Enter your text ..." autofocus></textarea>
+</form> -->
+
+
 <div class="container">
-	<div id="wrapper">
-		<div id="sidebar-wrapper"style="background-image: linear-gradient(-180deg, {{ $entries->entry_color_1 }} 0%, {{ $entries->entry_color_2 }} 51%, {{ $entries->entry_color_3 }} 100%);" class="entry_post--colorbox">
-		    <ul class="sidebar-nav">
-		        <li class="sidebar-brand"></li>
-		    </ul>
-		</div>
-
-		<div class="container-fluid">
-			<div class="entry_view--icons row">
-
-				<div class="con-sm-6 pull-left">
-					<ul class="list-unstyled">
-						<li>
-							<a href="{{ url('/user') }}"><span class="glyphicon glyphicon-menu-left" aria-hidden="true"></a></span>
-						</li>
-					</ul>
-				</div>
-
-				<ul class="col-sm-6 list-unstyled list-inline pull-right glyphicons">
-					<li>
-						<a href=""><span class="glyphicon glyphicon-share" aria-hidden="true"></a></span>
-					</li>
-					<li>
-						<a href=""><span class="glyphicon glyphicon-fire" aria-hidden="true"></a></span>
-					</li>
-					<li>
-						<a href=""><span class="glyphicon glyphicon-trash" aria-hidden="true"></a></span>
-					</li>
-					<li>
-					<!-- FIND THE RIGHT WAY TO PUT IN URL -->
-						<a href="{{url('user/edit').'/'.$entries->id}}"><span class="glyphicon glyphicon-edit" aria-hidden="true"></a></span>
-					</li>
-					<li>
-						<a href=""><span class="glyphicon glyphicon-option-horizontal" aria-hidden="true"></a></span>
-					</li>
-				</ul>
-			</div>		
-		</div>
-
-	{{-- expr --}}
-
-		<div class="container">
-			<div class="row date">
-				<div class="col-md-6 entry_view--date pull-right">
-					<p>May</p>
-					<p>13</p>
-					<p>2016</p>			
-				</div>
-			</div>
-		</div>	
-	<div class="container">
-			<div class="row col-sm-12">
-				<div class="entry_view--identifier">
-					<h3 class="entry_view--identifier__title light">{{ $entries->entry_title }}</h3>	
-					<h3 class="entry_view--identifier__author light">Created By</h3>	
-				</div>
-				<div class="col-sm-7 entry_view--identifier__body">
-					<p class="light opensans">{{ $entries->entry_body }}</p>
-			</div>
-
-			<div class="container">
-				<div class="row">
-					<div class="col-md-12 entry_view--identifier__tags">
-						<p class="light">{{ $entries->tag_field }}<!-- #Boggarts #lavender #ganger #krum #invisibility #half-blood-Prince #Umbridge #dragon-scale #Sirius-Black #elf #grayback --></p>
-					</div>
-				</div>
-			</div>
-
-		</div>
+ 
+	<div class="editable--textarea">
+ 		<div class="col-sm-12">
+ 			<p class="light opensans">{{ $entries->entry_body }}</p>
 		</div>
 	</div>
-</div>
+
+
+
+		<div class="row">
+			<div class="col-sm-12">
+				<h5 class="created--timestamp opensans light italic"> {{ $entries->created_at->format('m/d/Y') }}</h5>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-sm-9">
+				<h6 class="edited--timestamp opensans light italic">Last edited {{ $entries->updated_at->format('m/d/Y H:i:s') }}</h6>
+			</div>
+	</div>
+
+
+<!-- <a class="btn-primary btn save_btn">CATS NOW</a> -->
+
 
 
 @endsection 

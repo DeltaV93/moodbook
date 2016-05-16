@@ -14,3 +14,16 @@
 .date {
 	width: 100%;
 }
+.editable--title__view{
+	height: 135px;
+	width: 100%;
+	font-family: OpenSans-Light;
+	// color: #000;
+	font-size: 48px;
+	letter-spacing: 1px;	
+	text-align: center;
+	background-image: linear-gradient(-180deg, lavender 0%, lightblue 51%,lightgreen 100%);
+}
+h1.text__white.editable--title__view {
+    padding-top: 33px;
+}

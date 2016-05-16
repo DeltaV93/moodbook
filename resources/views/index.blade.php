@@ -2,9 +2,9 @@
 @section('content')
 
 <section class="">
-    <div class="container-fluid jumbotron jumbotron-into text__white">
-      <h1 class="jumbotron-intro--title ">MoodBook</h1>
-      <p class="jumbotron-intro--sub-title light">Would you paint with all the colors of your words?</p>
+    <div class="container-fluid jumbotron jumbotron-into text__white text-center">
+      <h1 class="heavy">MoodBook</h1>
+      <h2 class="light">Would you paint with all the colors of your words?</h2>
 
       <a href="{{ url('/login') }}"><button class="btn__primary">Login in</button></a>
     </div>
