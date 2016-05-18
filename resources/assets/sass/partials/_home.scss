@@ -1,14 +1,3 @@
-@font-face {
-  font-family: 'Glyphicons Halflings';
-        src: url('../fonts/glyphicons-halflings-regular.eot');
-        src: url('../fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'),       url('../fonts/glyphicons-halflings-regular.woff') format('woff'),        url('../fonts/glyphicons-halflings-regular.ttf') format('truetype'),       url('../fonts/glyphicons-halflings-regular.svg#glyphicons-halflingsregular') format('svg');
-}
-// @font-face {
-//   font-family: 'FontAwesome';
-//         src: url('../fonts/fontawesome-webfont.eot');
-//         src: url('../fonts/fontawesome-webfont.eot?#iefix') format('embedded-opentype'),       url('../fonts/glyphicons-halflings-regular.woff') format('woff'),        url('../fonts/glyphicons-halflings-regular.ttf') format('truetype'),       url('../fonts/glyphicons-halflings-regular.svg#glyphicons-halflingsregular') format('svg');
-// }
-// 
 .newEntry {
 	left: 195px;
 	border: lightgray 2.8px solid;
@@ -20,6 +9,10 @@
     top: 9px;
     position: absolute;	
 }
+.entry_post_defult.col-sm-12{
+	border-bottom: lightgray 1px solid;
+}
+
 .color {
     width: 700px;
     z-index: -1;
@@ -36,28 +29,8 @@
 	margin-top: 60px;
 }
 
-.moodbook--entry {
-	// border-bottom: lightgray 1px solid;
-	// border-left: lightgray 1px solid;
-    padding-bottom: 40px;
-    width: 642px;
-    margin-bottom: 80px;
-}
-
-.moodbook--entry ul {
-	// margin-top: 50px;
-}
-.moodbook--words {
-	margin-top: 50px;
-}
 .profile_header_colorbox {
 	background-image: linear-gradient(-90deg, #FCD6C3 1%, #E98397 51%, #19224F 100%);
-}
-.profile_header {
-	padding-top: 25px;
-	padding-bottom: 10px;
-	margin-top: 6.5px;
-	background-color: rgba(255,255,255, 0.5);
 }
 
 .profile_header--img {
@@ -68,48 +41,51 @@
 		border-radius: 8px;
 	}
 }
-.profile_header--users_info {
-	// margin-left: 87px;
-}
-.profile_header--usersname::after {
-	font-family: 'Glyphicons Halflings';
-	content: ""\f085"";
-}
-.profile_header--user_bio::after {
-	// font-family: "FontAwesome";
-	// content: "\f082";
-	// position: relative;
-	// top: 30px;
-	// left: -130px;
-	// padding: 0 18px;
 
-}
-.profile_header--usersname > span {
-	// margin-left: 55%;
-}
-.entry_post {
-	margin-top: 50px;
-}
-.entry_post_defult {
-	box-shadow: inset 0px -1px 0px 0px rgba(0,0,0,0.20);
-	padding-bottom: 20px;
-}
+
 .entry_post--colorbox {
 	background-image: linear-gradient(-180deg, #E85D5A 0%, #33014D 100%);
 	width: 103px; 
 	height: 177px; 
 }
+.moodbook--entry__single {
+	border: lightgray 1px solid;	
+    // width: 37.125em;
+    width: 105%;
+    padding-bottom: 6%;
+    // padding-bottom: 40px;
+
+}
+.entry_post_defult{
+	margin-bottom: 48px;
+	padding-bottom: 24px;
+	border-box: lightgray 1px solid;
+}
+.mbook--words {
+	margin-top: 50px;
+}
 // FIXING THE PHONE VIEW 
 @media (max-width: $screen-phone)  {
-	.profile_header--usersname::after {
-		font-family: 'Glyphicons Halflings';
-		content: ""\f085"";
-		width: 80px;
+	.moodbook--entry__single {
+	    // width: 43%;
+	}	
+	.entry_post--colorbox {
+		height: 105px;
+		width: 100%;
 	}
-	.entry_post_defult {
-		padding-bottom: 0px;
+}
+// FIXINT THE IPAD VIEW LADESCAPE
+@media (max-width: 1024px)  {
+	.mbook-entry{
+		margin-bottom: 50px;
 	}
-	.entry_post {
-		margin-top: 10px;
+	.entry_post_defult.col-sm-12{
+		border: none;
+		height: 232px;
+		border-bottom: lightgray 1px solid;
 	}
+	.entry_post--colorbox {
+		height: 105px;
+		width: 100%;
+	}	
 }

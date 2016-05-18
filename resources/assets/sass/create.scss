@@ -40,6 +40,10 @@ input:-moz-placeholder, textarea:-moz-placeholder {
 	margin-top: 35px;
 	font-size: 1.2em;
 }
-.moodbook--edit-bar {
+.moodbook--editbar {	
 	border-color: #e7e7e7;
+	& li {
+		margin-top: 20px;
+		
+	}
 }

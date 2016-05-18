@@ -10,18 +10,30 @@
       </button>
 
       <a class="brandLogo navbar-brand " href="/"><span class="text__primary heavy">Mood</span>Book</a>
-      <a class="brandLogo navbar-brand newEntry" href="{{ url('user/create') }}"><span class="text__primary">+</span></a>
-    </div>
 
+@if (Auth::check())
+      <a class="brandLogo navbar-brand newEntry hidden-sm hidden-xs" href="{{ url('user/create') }}"><span class="text__primary">+</span></a>
+    </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 
       <ul class="nav navbar-nav navbar-right">
+
+        <li><a class="navbar-items hidden-md hidden-lg" href="{{ url('user/create') }}">Add New Entry</a></li>
         <li><a class="navbar-items" href="{{ url('/user')}}">{{ $fullname }}</a></li>
         <li><a class="navbar-items" href="{{ url('/logout')}}">Logout</a></li>
       </ul>
     </div><!-- /.navbar-collapse -->
+@else 
+  </div>
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 
+      <ul class="nav navbar-nav navbar-right">
+        <li><a class="navbar-items" href="{{ url('/login') }}">Login In</a></li>
+        <li><a class="navbar-items" href="{{ url('/register') }}">Sign Up</a></li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  @endif
   </div><!-- /.container-fluid -->
 </nav>

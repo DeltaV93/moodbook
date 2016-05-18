@@ -5,7 +5,7 @@
 		<h1 class="text-left text__white editable--title__view" style="background-image: linear-gradient(-180deg, {{ $entries->entry_color_1 }} 0%, {{ $entries->entry_color_2 }} 51%, {{ $entries->entry_color_3 }} 100%);">{{ $entries->entry_title }}</h1>
 </div>
 
-<div class="col-md-offset-5 moodbook--edit-bar">
+<div class="col-xs-offset-2 col-md-offset-5 moodbook--edit-bar">
 	<ul class="list-inline ">
 		<li><a href="{{ url('user/edit').'/'.$entries->id }}"><button class="btn__primary--outline">Edit</button></a></li>
 		<li><a href="{{ url('user/share') }}"><button class="btn__primary--outline">Share</button></a></li>
@@ -49,7 +49,7 @@
 
 		<div class="row">
 			<div class="col-sm-9">
-				<h6 class="edited--timestamp opensans light italic">Last edited {{ $entries->updated_at->format('m/d/Y H:i:s') }}</h6>
+				<h6 class="edited--timestamp opensans light italic">Last edited {{ $entries->updated_at->format('m/d/Y H:i') }}</h6>
 			</div>
 	</div>
 

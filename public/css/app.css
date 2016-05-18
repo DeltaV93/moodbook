@@ -5922,11 +5922,6 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
   background-image: none;
   color: #21252A; }
 
-@font-face {
-  font-family: 'Glyphicons Halflings';
-  src: url("../fonts/glyphicons-halflings-regular.eot");
-  src: url("../fonts/glyphicons-halflings-regular.eot?#iefix") format("embedded-opentype"), url("../fonts/glyphicons-halflings-regular.woff") format("woff"), url("../fonts/glyphicons-halflings-regular.ttf") format("truetype"), url("../fonts/glyphicons-halflings-regular.svg#glyphicons-halflingsregular") format("svg"); }
-
 .newEntry {
   left: 195px;
   border: lightgray 2.8px solid;
@@ -5937,6 +5932,9 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
   font-size: 30px;
   top: 9px;
   position: absolute; }
+
+.entry_post_defult.col-sm-12 {
+  border-bottom: lightgray 1px solid; }
 
 .color {
   width: 700px;
@@ -5949,22 +5947,8 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
 .moodbook {
   margin-top: 60px; }
 
-.moodbook--entry {
-  padding-bottom: 40px;
-  width: 642px;
-  margin-bottom: 80px; }
-
-.moodbook--words {
-  margin-top: 50px; }
-
 .profile_header_colorbox {
   background-image: linear-gradient(-90deg, #FCD6C3 1%, #E98397 51%, #19224F 100%); }
-
-.profile_header {
-  padding-top: 25px;
-  padding-bottom: 10px;
-  margin-top: 6.5px;
-  background-color: rgba(255, 255, 255, 0.5); }
 
 .profile_header--img {
   width: 220px;
@@ -5972,31 +5956,39 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
   .profile_header--img img {
     border-radius: 8px; }
 
-.profile_header--usersname::after {
-  font-family: 'Glyphicons Halflings';
-  content: "" \f085 ""; }
-
-.entry_post {
-  margin-top: 50px; }
-
-.entry_post_defult {
-  box-shadow: inset 0px -1px 0px 0px rgba(0, 0, 0, 0.2);
-  padding-bottom: 20px; }
-
 .entry_post--colorbox {
   background-image: linear-gradient(-180deg, #E85D5A 0%, #33014D 100%);
   width: 103px;
   height: 177px; }
 
+.moodbook--entry__single {
+  border: lightgray 1px solid;
+  width: 105%;
+  padding-bottom: 6%; }
+
+.entry_post_defult {
+  margin-bottom: 48px;
+  padding-bottom: 24px;
+  border-box: lightgray 1px solid; }
+
+.mbook--words {
+  margin-top: 50px; }
+
 @media (max-width: 480px) {
-  .profile_header--usersname::after {
-    font-family: 'Glyphicons Halflings';
-    content: "" \f085 "";
-    width: 80px; }
-  .entry_post_defult {
-    padding-bottom: 0px; }
-  .entry_post {
-    margin-top: 10px; } }
+  .entry_post--colorbox {
+    height: 105px;
+    width: 100%; } }
+
+@media (max-width: 1024px) {
+  .mbook-entry {
+    margin-bottom: 50px; }
+  .entry_post_defult.col-sm-12 {
+    border: none;
+    height: 232px;
+    border-bottom: lightgray 1px solid; }
+  .entry_post--colorbox {
+    height: 105px;
+    width: 100%; } }
 
 /*!
  * Start Bootstrap - Simple Sidebar HTML Template (http://startbootstrap.com)
@@ -6077,7 +6069,7 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
   #wrapper.toggled {
     padding-left: 0; }
   #sidebar-wrapper {
-    width: 250px; }
+    width: 233px; }
   #wrapper.toggled #sidebar-wrapper {
     width: 0; }
   #page-content-wrapper {
@@ -6248,7 +6240,7 @@ ul.nav.navbar-nav.navbar-right {
   position: absolute; }
 
 .navbar-items {
-  letter-spacing: 5.49px;
+  letter-spacing: 0.5px;
   color: #21252A;
   margin: 0 10px; }
 
@@ -6314,8 +6306,10 @@ input:-moz-placeholder, textarea:-moz-placeholder {
   margin-top: 35px;
   font-size: 1.2em; }
 
-.moodbook--edit-bar {
+.moodbook--editbar {
   border-color: #e7e7e7; }
+  .moodbook--editbar li {
+    margin-top: 20px; }
 
 .wysiwyg-font-size-smaller {
   font-size: smaller; }

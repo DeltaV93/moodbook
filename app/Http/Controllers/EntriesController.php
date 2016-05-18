@@ -27,7 +27,7 @@ class EntriesController extends Controller {
 	{
 			$user = Auth::user()->get();
 			$first = Auth::user()->first_name;
-			$last = Auth::user()->first_name;
+			$last = Auth::user()->last_name;
 			$bio = Auth::user()->user_bio;
 			$photo = Auth::user()->user_photo;
 			$fullname = $first.' '.$last;
@@ -44,7 +44,7 @@ class EntriesController extends Controller {
 	{
 		$user = Auth::user()->get();
 		$first = Auth::user()->first_name;
-		$last = Auth::user()->first_name;
+		$last = Auth::user()->last_name;
 		$bio = Auth::user()->user_bio;
 		$photo = Auth::user()->user_photo;
 		$fullname = $first.' '.$last;		
@@ -57,9 +57,9 @@ class EntriesController extends Controller {
 
 	public function create()
 	{
-		// $user = Auth::user()->get();
+		$user = Auth::user()->get();
 		$first = Auth::user()->first_name;
-		$last = Auth::user()->first_name;
+		$last = Auth::user()->last_name;
 		$fullname = $first.' '.$last;		
 		// $entries = Entry::all();
 
@@ -70,7 +70,7 @@ class EntriesController extends Controller {
 	{
 		$user = Auth::user()->get();
 		$first = Auth::user()->first_name;
-		$last = Auth::user()->first_name;
+		$last = Auth::user()->last_name;
 		$bio = Auth::user()->user_bio;
 		$photo = Auth::user()->user_photo;
 		$fullname = $first.' '.$last;		
@@ -165,7 +165,7 @@ class EntriesController extends Controller {
 	{
 		$user = Auth::user()->get();
 		$first = Auth::user()->first_name;
-		$last = Auth::user()->first_name;
+		$last = Auth::user()->last_name;
 		$bio = Auth::user()->user_bio;
 		$photo = Auth::user()->user_photo;
 		$fullname = $first.' '.$last;		
@@ -179,7 +179,7 @@ class EntriesController extends Controller {
 	{
 		$user = Auth::user()->get();
 		$first = Auth::user()->first_name;
-		$last = Auth::user()->first_name;
+		$last = Auth::user()->last_name;
 		$bio = Auth::user()->user_bio;
 		$photo = Auth::user()->user_photo;
 		$fullname = $first.' '.$last;		

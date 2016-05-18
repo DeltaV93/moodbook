@@ -56,13 +56,25 @@ Route::group(['middleware' => 'web'], function () {
     Route::get('/callback/{provider}', 'SocialAuthController@callback'); 
     
     Route::get('/', function () {
-	    return view('index');
-	});
+        if (Auth::check()) {
+            $user = Auth::user()->get();
+            $first = Auth::user()->first_name;
+            $last = Auth::user()->last_name;
+            $bio = Auth::user()->user_bio;
+            $photo = Auth::user()->user_photo;
+            $fullname = $first.' '.$last;    
+            return view('index', compact('fullname'));
+        } else {
+            return view('index');
+        }
+        
+    });
 
     /* 
     | ROUTES TO ALLOW USERS TO LOGIN IN VIA TWITTER 
     */  
     Route::get('home', function(){
+
         return view('home');
 });
 

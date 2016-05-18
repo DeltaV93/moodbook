@@ -3,8 +3,8 @@
 	{!! Form::text('entry_title', null, ['class' => 'form-control editable--title', 'placeholder'=>'Untilted']) !!}
 </div>
 
-<div class="col-md-offset-5 moodbook--edit-bar">
-	<ul class="list-inline ">
+<div class="col-xs-offset-2 col-md-offset-5 moodbook--edit-bar">
+	<ul class="list-inline moodbook--editbar center-block">
 		<li><button class="btn__primary--outline">Edit</button></a></li>
 		<li><button class="btn__primary--outline">Share</button></a></li>
 		<li><button class="btn__primary--outline">Delete</button></a></li>

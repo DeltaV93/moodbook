@@ -8,35 +8,33 @@
 	        <li class="sidebar-brand">
 	        	<i href="" class="fa fa-facebook-square" aria-hidden="true"></i>
 	        	<i href="" class="fa fa-twitter-square" aria-hidden="true"></i>
-	        	<i href="" class="fa fa-instagram" aria-hidden="true"></i>
+	        	<!-- <i href="" class="fa fa-instagram" aria-hidden="true"></i> -->
 	    	</li>
 	        <li class="sidebar-brand">{{ $bio }}</li>
 	    </ul>
 	</div>
 
-<div class="moodbook col-xs-8 col-md-offset-1 col-md-8">
+<div class="moodbook col-xs-offset-2 col-xs-8 col-md-offset-1 col-md-8">
 @foreach ($entries as $entry)
-<div class="moodbook--entry" {{--style="background-image: linear-gradient(-180deg, {{ $entry->entry_color_1 }} 0%, {{ $entry->entry_color_2 }} 51%, {{ $entry->entry_color_3 }} 100%);"--}}>
-	
-	<ul class="row list-unstyled">
-		<li>
-			<div class="moodbook--words col-xs-4 col-md-2">
-				{{ $entry->created_at->format('m/d/Y')}}
-			</div>				
-		</li>
+<div class=" entry_post_defult col-sm-12">
+	<div class="mbook-entry">
 
-		<li>
-			<div class="col-xs-9 col-md-11 ">
-				<a class="" href="{{ url('user/show').'/'.$entry->id }}"><h2>{{ $entry->entry_title }}</h2></a>	
+		<div class="">
+			<div class="entry_post--colorbox  pull-right" style="background-image: linear-gradient(-180deg, {{ $entry->entry_color_1 }} 0%, {{ $entry->entry_color_2 }} 51%, {{ $entry->entry_color_3 }} 100%);">
 			</div>
-		</li>
-		<li>
-			<div id='color' class="color col-xs-offset-10 col-xs-1 entry_post--colorbox pull right" style="background-image: linear-gradient(-180deg, {{ $entry->entry_color_1 }} 0%, {{ $entry->entry_color_2 }} 51%, {{ $entry->entry_color_3 }} 100%);">
-			</div>
-		</li>
-	</ul>
+		</div>
+
+		<div class="col-xs-8 col-sm-8 mbook--words">
+		<!-- <div class="col-xs-12 col-sm-8"> -->
+			{{ $entry->created_at->format('m/d/Y')}}
+			<a class="" href="{{ url('user/show').'/'.$entry->id }}"><h2>{{ $entry->entry_title }}</h2></a>			
+		</div>	
+
+	</div>
+
 </div>
 @endforeach
+
 </div>
 
 </div>
