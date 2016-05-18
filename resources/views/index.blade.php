@@ -6,7 +6,7 @@
       <h1 class="heavy">MoodBook</h1>
       <h2 class="light">Would you paint with all the colors of your words?</h2>
 
-      <a href="{{ url('/login') }}"><button class="btn__primary">Login in</button></a>
+      <a href="{{ url('/login') }}"><button class="btn__primary">Login</button></a>
     </div>
 <section>
 

@@ -34,7 +34,7 @@
 <div class="container">
  
 	<div class="editable--textarea">
- 		<div class="col-sm-12">
+ 		<div class="col-sm-10 col-sm-offset-1">
  			<p class="light opensans">{!! $entries->entry_body !!}</p>
 		</div>
 	</div>
@@ -42,13 +42,13 @@
 
 
 		<div class="row">
-			<div class="col-sm-12">
+			<div class="col-sm-10 col-sm-offset-1">
 				<h5 class="created--timestamp opensans light italic"> {{ $entries->created_at->format('m/d/Y') }}</h5>
 			</div>
 		</div>
 
 		<div class="row">
-			<div class="col-sm-9">
+			<div class="col-sm-10 col-sm-offset-1">
 				<h6 class="edited--timestamp opensans light italic">Last edited {{ $entries->updated_at->format('m/d/Y H:i') }}</h6>
 			</div>
 	</div>

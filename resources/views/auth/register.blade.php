@@ -17,7 +17,7 @@
         <div class="form-group form-group--siginup">
             <div class="col-md-1 col-sm-offset-2 login--label">
                 
-                <label class="control-label">Frist:</label>
+                <label class="control-label">First:</label>
             </div>
 
             <div class="col-md-4 signup--sm">

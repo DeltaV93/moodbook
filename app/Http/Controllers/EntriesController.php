@@ -190,14 +190,14 @@ class EntriesController extends Controller {
 
 		return redirect('user');
 	}
-	public function destroy($id, EntryRequest $request)
+	public function destroy($id)
 	{
 		$entries = Entry::findOrFail($id);
-
-		dd('HEY');
+		$entries->delete();
+		// dd('HEY');
 
 		// $entries->update($request->all());
 
-		// return redirect('user');
+		return redirect('user');
 	}
 }

@@ -1,6 +1,6 @@
 
 <div class="col-xs-12 col-sm-12 col-md-12  col-lg-12 ">
-	{!! Form::text('entry_title', null, ['class' => 'form-control editable--title', 'placeholder'=>'Untilted']) !!}
+	{!! Form::text('entry_title', null, ['class' => 'form-control editable--title', 'placeholder'=>'Untitled']) !!}
 </div>
 
 <div class="col-xs-offset-2 col-md-offset-5 moodbook--edit-bar">
@@ -38,32 +38,32 @@
     </div>
 @endif  
 	<div class="editable--textarea">
- 		<div class="col-sm-12">
+ 		<div class="col-sm-10 col-sm-offset-1">
 			{!! Form::textarea('entry_body', null, ['class' => 'editable--textarea text-box col-md-12 opensans', 'id' =>'textarea', 'placeholder' => 'Enter your text here.','style'=>"width:100%"]) !!}
 		</div>
 	</div>
 	<div class="editable--tag_field">
-		<div class="col-sm-12">
+		<div class="col-sm-10 col-sm-offset-1">
 			{!! Form::text('tag_field', null, ['placeholder' => '#Tags']) !!}
 		</div>
 	</div>
 
-		<div class="row">
-			<div class="col-sm-12">
-				<h5 class="created--timestamp opensans light italic"> Date Created</h5>
-			</div>
+	<div class="row">
+		<div class="col-sm-10 col-sm-offset-1">
+			<h5 class="created--timestamp opensans light italic"> Date Created</h5>
 		</div>
-
-		<div class="row">
-			<div class="col-sm-9">
-				<h6 class="edited--timestamp opensans light italic">Last edited March 22 at 12:37 am</h6>
-			</div>
 	</div>
-			<div class="col-sm-2 pull-right">
-				{!! Form::submit($submitButton, ['class' => 'btn__primary']) !!}
-				
-			</div>
 
+	<div class="row">
+		<div class="col-sm-10 col-sm-offset-1">
+			<h6 class="edited--timestamp opensans light italic">Last edited March 22 at 12:37 am</h6>
+		</div>
+	</div>
+	<div class="col-sm-2 pull-right">
+		{!! Form::submit($submitButton, ['class' => 'btn__primary']) !!}
+		
+	</div>
+</div>
 
 <!-- <a class="btn-primary btn save_btn">CATS NOW</a> -->
 

@@ -11,31 +11,11 @@
 |
 */
 
-
-
- 
-
-
-// 
-// USER ACCOUNT ROUTING
-// 
 Route::get('/test', function() {
     return view('test');
 });
 
 
-Route::get('/oldlogin', function() {
-    return view('layouts.modal.login');
-});
-Route::get('/oldregister', function() {
-    return view('layouts.modal.register');
-});
-
-
-
-// Route::get('edit', function () {
-//     return view('user.edit');
-// });
 
 /*
 |--------------------------------------------------------------------------
@@ -49,6 +29,9 @@ Route::get('/oldregister', function() {
 */
 
 Route::group(['middleware' => 'web'], function () {
+    /* 
+    | ROUTES TO ALLOW USERS TO LOGIN IN VIA TWITTER 
+    */  
     Route::auth();
 
     Route::get('/redirect/{provider}', 'SocialAuthController@redirect');
@@ -70,9 +53,7 @@ Route::group(['middleware' => 'web'], function () {
         
     });
 
-    /* 
-    | ROUTES TO ALLOW USERS TO LOGIN IN VIA TWITTER 
-    */  
+
     Route::get('home', function(){
 
         return view('home');
@@ -86,8 +67,8 @@ Route::group(['middleware' => 'web'], function () {
 */      
     Route::resource('user', 'EntriesController');
     Route::get('user/edit/{id}', 'EntriesController@edit');
-    Route::resource('user/show/{id}', 'EntriesController@show');
-    Route::resource('user/destroy/', 'EntriesController@destroy');
+    Route::get('user/show/{id}', 'EntriesController@show');
+    Route::get('user/destroy/{id}', 'EntriesController@destroy');
     Route::get('/register', 'HomeController@register');
 
 });
