@@ -3,14 +3,14 @@
 <div id="wrapper">
 	<div id="sidebar-wrapper"style="background-image: linear-gradient(-180deg, lavender 0%, lightblue 51%,lightgreen 100%);" class="entry_post--colorbox">
 	    <ul class="sidebar-nav">
-	        <li class="sidebar-brand">{{ $photo }}</li>
-	        <li class="sidebar-brand text__white"><h2>{{ $fullname }}</h2></li>
+	        <li class="sidebar-brand col-sm-12"><img class="img-responsive mbook--profile-img" src="{{ $photo }}"></li>
+	        <li class="sidebar-brand mbook--profile-name col-sm-12 text__white"><h2>{{ $fullname }}</h2></li>
 	        <li class="sidebar-brand">
-	        	<i href="" class="fa fa-facebook-square" aria-hidden="true"></i>
-	        	<i href="" class="fa fa-twitter-square" aria-hidden="true"></i>
+<!-- 	        	<i href="" class="fa fa-facebook-square" aria-hidden="true"></i>
+	        	<i href="" class="fa fa-twitter-square" aria-hidden="true"></i> -->
 	        	<!-- <i href="" class="fa fa-instagram" aria-hidden="true"></i> -->
 	    	</li>
-	        <li class="sidebar-brand">{{ $bio }}</li>
+	        <li class="sidebar-brand col-sm-11 text-center "><p>{{ $bio }}</p></li>
 	    </ul>
 	</div>
 

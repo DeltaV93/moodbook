@@ -5928,6 +5928,21 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
   background-image: none;
   color: #21252A; }
 
+.mbook--profile-img {
+  height: 200px;
+  width: 200px; }
+
+.sidebar-nav > .sidebar-brand {
+  line-height: 0px; }
+
+.sidebar-nav li {
+  margin-top: 20px;
+  margin-bottom: 50px; }
+
+.mbook--profile-name h2 {
+  margin-top: 98px;
+  margin-bottom: 10px; }
+
 .newEntry {
   left: 195px;
   border: lightgray 2.8px solid;
