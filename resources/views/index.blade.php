@@ -16,7 +16,7 @@
             <img src="{{ URL::asset('/img/where.svg') }}" alt="Stickfigure drawing of someone reading a book" class="col-xs-12 col-xs-offset-2 col-sm-4 col-md-5 col-md-offset-2 img-circle about-us-img about-us-why">
             <div class="row col-xs-12 col-sm-12">
             <h2 class="text-center">Why</h2>
-            <p class=" light about-us-body">Every been on any social medai site and see a friend complain none stop? Well, that's why. Most people do not understand the weight of their words.</p>
+            <p class=" light about-us-body">Every been on any social medai site and see a friend complain nonstop? Well, that's why. Most people do not understand the weight of their words.</p>
             </div>    
         </div>
         <div class="container col-md-4">
@@ -68,20 +68,25 @@
                 </div> -->
 
                 </div>
+                <div id="status" class="col-sm-10 col-sm-offset-1 text__danger">Not saved</div>
                     {!! Form::open() !!}
+  
                     {!! Form::textarea('testDriveText', null,['class' => 'text-box ','id'=>'textarea','style'=>" col-xs-3",'placeholder' => 'If you use postive words, you will get bright colors. Use negative words ... well you get the picture.']) !!}
-                <div>
+
+                    {!! Form::text('entry_title', null) !!}
+                {{--<div>
                     {!! Form::submit('Submit', ['class' => 'btn__primary']) !!}      
-                </div>  
+                </div>  --}}
                     {!! Form::close() !!}            
             </div>
-            <div class="col-sm-3 col-md-3 ">
-                <div class="testdrive-colorbox"></div>
+            <div class="col-sm-3 col-md-3 editable--title">
+                <div class="testdrive-colorbox editable--title"></div>
             </div>
                 <!-- <div class="col-sm-6 col-md-6 "> -->
             
         </div>
     </div>
 </section> 
+
 
 @endsection

@@ -15,7 +15,7 @@ class Entry extends Model
         'entry_color_3',
     	'entry_body',
     	'tag_field',
-    	'user_id' //temp
+    	'user_id' 
     ];
 
     /**

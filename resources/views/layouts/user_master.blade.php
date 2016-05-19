@@ -36,7 +36,7 @@
         
 
        
-<script src="https://code.jquery.com/jquery-2.2.3.min.js" integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo=" crossorigin="anonymous"></script>
+<!-- <script src="https://code.jquery.com/jquery-2.2.3.min.js" integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo=" crossorigin="anonymous"></script> -->
 
 <script type="text/javascript">
 var $status = $('#status'),
@@ -69,14 +69,11 @@ $commentBox.keypress(function () {
                 entry_body: $commentBox.val()
             }
 
-
-
     }, 50).done(function(result){
         $entry_color_1 = result[0],
         $entry_color_2 = result[1],
         $entry_color_3 = result[2];        
-        // $test.css('background-color', $entry_color_1);
-        // background-image: linear-gradient(-180deg, lavender 0%, lightblue 51%,lightgreen 100%);
+        
         $titleBox.css('background-image','linear-gradient(-180deg,'+ $entry_color_1+' 0%, '+ $entry_color_2+' 51%, '+ $entry_color_3 +' 100%)');
         $color_input_1.val($entry_color_1);
         $color_input_2.val($entry_color_2);
@@ -87,72 +84,12 @@ $commentBox.keypress(function () {
         })  
         $status.attr('class', 'saved').text('changes saved');
         $status.addClass('text__success');
+        $titleBox.addClass('text__white trans');
 
 
     });
 });    
 
-// $commentBox.keypress(function () {
-//     $status.attr('class', 'pending').text('changes pending');
-
-//     // If a timer was already started, clear it.
-//     if (timeoutId) clearTimeout(timeoutId);
-
-//     // Set timer that will save comment when it fires.
-//     timeoutId = setTimeout(function () {
-//         // Make ajax call to save data.
-//         $status.attr('class', 'saved').text('changes saved');
-//     }, 750);
-// });
-
-// $(function(){
-
-//     $(".save_btn").click(function(){
-        
-//        $.ajax({
-//             type: "STORE",
-//             url: "store",
-//             data: { 
-
-//                 entry_title: "cat",
-//                 entry_body: "cat"
-//             },
-//             success: function(result){
-//                 console.log('result');
-//             }
-//         })
-//     });
-
-
-// });        
-<!-- </script>   
-<script>
- // $( ".moodbook--entry, ul, li, div" ).hover(function() {
- //   $(this).addClass('text__white'),
- //   $('.color').addClass('trans'),
- //   $('.color').width(700);
- // }); 
- // $( ".moodbook--entry, ul, li, div" ).mouseout(function() {
- //   $(this).removeClass('text__white');
- //   $('.color').width(73.3);
- // });    
-
- // $('.moodbook--entry').hover(function(){
- //    var entry = $(this);
-
- //     entry.addClass('text__white');
- //     $('.moodbook--entry .color').addClass('tran');
- //     $(this+' #color').width(700);
- // }
- // );
- 
- // $('.moodbook--entry ul li').hover(function () {
- //     // alert('hey');
- //     $(this).parent().siblings("#color").toggleClass('color__full'),
- //     // alert('hey');
- // });
-
-
-</script>   
+</script>  
     </body>
 </html>

@@ -89,7 +89,12 @@ class EntriesController extends Controller {
 		$last = Auth::user()->last_name;
 		$bio = Auth::user()->user_bio;
 		$photo = Auth::user()->user_photo;
-		$fullname = $first.' '.$last;		
+		$fullname = $first.' '.$last;
+		$new_array = array();
+		$value_array = array();
+		$output = [];	
+		$chunk_array_sum = [];
+		$color_gradient_stops = [];	
 
 		$newEntry = new Entry($request->all());
 		// MAKES THE RELATIONSHIP BETWEEN USER AND ENTRY 
@@ -108,15 +113,13 @@ class EntriesController extends Controller {
 		// COUNT THE LENTH OF THE WORDS AND DIVIDE IT BY 3
 		$entry_lenth = count($entry_explode);
 
-		$new_array = array();
-		$value_array = array();
+
 		// EACH WORD GETS ANALAYZED 
 		$matched_words = Words::whereIn('word', $entry_explode)->get();
 		foreach($matched_words as $matched_word){
 				$value_array[$matched_word->word]=$matched_word->value;
 		}
 
-		$output = [];
 		// FIND EACH WORDS VALUE AND PUT IT IN AN ARRAY 
 	    foreach($entry_explode as $word){
 	        if(array_key_exists(strtolower($word), $value_array)) {
@@ -137,7 +140,6 @@ class EntriesController extends Controller {
 		
 
 		// FOR EACH CHUNK DO THE MATH ON EACH CHUNKS IN THREE_NUMS_CHUNKS
-		$chunk_array_sum = [];
 		foreach ($three_nums_chunks as $num_chunk) {
 			$chunk_array_sum[] = array_sum($num_chunk);
 		}
@@ -156,7 +158,6 @@ class EntriesController extends Controller {
 		}
 
 		// SET EACH ONE OF THOSE NUMERS TO COLORS THAT RUN THROUGHT toColor
-		$color_gradient_stops = [];
 		foreach ($big_num as $color_number) {
 			$color_gradient_stops[] = toColor($color_number);
 		}
@@ -210,9 +211,6 @@ class EntriesController extends Controller {
 	{
 		$entries = Entry::findOrFail($id);
 		$entries->delete();
-		// dd('HEY');
-
-		// $entries->update($request->all());
 
 		return redirect('user');
 	}

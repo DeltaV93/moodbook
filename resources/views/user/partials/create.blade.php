@@ -40,18 +40,18 @@
         </ul>
     </div>
 @endif  
-	<div id="status" class="text__danger">Not saved</div>
+	<div id="status" class="col-sm-10 col-sm-offset-1 text__danger">Not saved</div>
 	<div class="editable--textarea">
  		<div class="col-sm-10 col-sm-offset-1">
 			{!! Form::textarea('entry_body', null, ['class' => 'editable--textarea text-box col-md-12 opensans', 'id' =>'textarea', 'placeholder' => 'Enter your text here.','style'=>"width:100%"]) !!}
 		</div>
 	</div>
-	<div class="editable--tag_field">
+{{-- 	<div class="editable--tag_field">
 		<div class="col-sm-10 col-sm-offset-1">
 			{!! Form::text('tag_field', null, ['placeholder' => '#Tags']) !!}
 		</div>
-	</div>
-
+	</div> --}}
+<!-- 
 	<div class="row">
 		<div class="col-sm-10 col-sm-offset-1">
 			<h5 class="created--timestamp opensans light italic"> Date Created</h5>
@@ -62,8 +62,8 @@
 		<div class="col-sm-10 col-sm-offset-1">
 			<h6 class="edited--timestamp opensans light italic">Last edited March 22 at 12:37 am</h6>
 		</div>
-	</div>
-	<div class="col-sm-2 pull-right">
+	</div> -->
+	<div class="col-sm-2 col-sm-offset-1 pull-right">
 		{!! Form::submit($submitButton, ['class' => 'btn__primary']) !!}
 	</div>
 </div>

@@ -5,7 +5,7 @@
 
 	<div class="form-group">
 		{!! Form::open(['url' => '/user' ]) !!}
-			@include('user.partials.create', ['submitButton' => "Add"])
+			@include('user.partials.create', ['submitButton' => "Save Entry"])
 			{{--@include('user.partials.errors')--}}
 		{!! Form::close() !!}
 

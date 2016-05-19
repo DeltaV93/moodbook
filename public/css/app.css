@@ -6270,9 +6270,7 @@ ul.nav.navbar-nav.navbar-right {
 
 .editable--title {
   height: 135px;
-  opacity: 0.75;
   font-family: OpenSans-Light;
-  color: #000;
   font-size: 48px;
   letter-spacing: 1px;
   text-align: center; }
@@ -6308,7 +6306,8 @@ input:-moz-placeholder, textarea:-moz-placeholder {
   letter-spacing: 3.67px; }
 
 .editable--textarea {
-  margin-top: 35px;
+  margin-bottom: 15px;
+  height: 150px;
   font-size: 1.2em; }
 
 .moodbook--editbar {

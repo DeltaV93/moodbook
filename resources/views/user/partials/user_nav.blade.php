@@ -30,7 +30,7 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 
       <ul class="nav navbar-nav navbar-right">
-        <li><a class="navbar-items" href="{{ url('/login') }}">Login In</a></li>
+        <li><a class="navbar-items" href="{{ url('/login') }}">Login</a></li>
         <li><a class="navbar-items" href="{{ url('/register') }}">Sign Up</a></li>
       </ul>
     </div><!-- /.navbar-collapse -->
