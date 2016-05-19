@@ -6,13 +6,13 @@
 	{!! Form::hidden('entry_color_3',null , ['id' => 'entry_color_3'] ) !!}
 </div>
 
-<div class="col-xs-offset-2 col-md-offset-5 moodbook--edit-bar">
+<!-- <div class="col-xs-offset-2 col-md-offset-5 moodbook--edit-bar">
 	<ul class="list-inline moodbook--editbar center-block">
 		<li><button class="btn__primary--outline">Edit</button></a></li>
 		<li><button class="btn__primary--outline">Share</button></a></li>
 		<li><button class="btn__primary--outline">Delete</button></a></li>
 	</ul>
-</div>
+</div> -->
 	
 <!-- <div class="colorbox">
 	<div style="width: 100%; height: 241px; color: transparent; background-image: linear-gradient(-180deg, #E85D5A 0%, #33014D 100%);" class="entry_post colorbox__create col-md-4"></div>

@@ -16,14 +16,14 @@
             <img src="{{ URL::asset('/img/where.svg') }}" alt="Stickfigure drawing of someone reading a book" class="col-xs-12 col-xs-offset-2 col-sm-4 col-md-5 col-md-offset-2 img-circle about-us-img about-us-why">
             <div class="row col-xs-12 col-sm-12">
             <h2 class="text-center">Why</h2>
-            <p class=" light about-us-body">Every been on any social medai site and see a friend complain nonstop? Well, that's why. Most people do not understand the weight of their words.</p>
+            <p class=" light about-us-body">Every been on any social media site and see a friend complain non stop? Well, that's why. Most people do not understand the weight of their words.</p>
             </div>    
         </div>
         <div class="container col-md-4">
             <img src="{{ URL::asset('/img/why.svg') }}" alt="Stick Figure Drawing of someone in a thinking postion with a question mark above their head." class="col-xs-12 col-xs-offset-2 col-sm-4 col-md-5 col-md-offset-2 img-circle about-us-img about-us-how">
             <div class="row col-xs-12 col-sm-12">
             <h2 class="text-center">How</h2>
-            <p class="col-sm-12 light about-us-body">We base everthing on the words you use. By breaking down your input, we can get a good idea of how your feeling. We then create colors based on your words.</p>
+            <p class="col-sm-12 light about-us-body">We base everything on the words you use. By breaking down your input, we can get a good idea of how your feeling. We then create colors based on your words.</p>
             </div>    
         </div>
 
@@ -31,7 +31,7 @@
             <img src="{{ URL::asset('/img/how.svg') }}" alt="Stick Figure hovered over a labtop getting ready to use MoodBook" class="col-xs-12 col-xs-offset-2 col-sm-4 col-md-5 col-md-offset-2 img-circle about-us-img about-us-where">
             <div class="row col-xs-12 col-sm-12">
             <h2 class="text-center">Where</h2>
-            <p class="col-xs-12 col-sm-12 light about-us-body">Since this is a mobile first website, you can access it anywhere you have a internet connection. Soon we will be intergrating Twitter and Facebook into our app. That way you will be able to see the colors you make on othere social media website.</p>
+            <p class="col-xs-12 col-sm-12 light about-us-body">MoodBook its built to be used on any device! As long as you have internet acess you will be able to use you phone, tablet or computer write all you want.</p>
             </div>
         </div>
     </div>
