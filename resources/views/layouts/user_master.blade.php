@@ -30,50 +30,95 @@
         {{-- APP CONTENT ENDS --}}
         
         {{-- APP SCRIPTS --}}
-        {!! HTML::script('js/app.js') !!}
-        {{--!! HTML::script('js/toolbar.js') !!}
-        {!! HTML::script('js/advanced_and_extended.js') !!}
-        {!! HTML::script('js/editor.js') !!--}}
+        {{ HTML::script('js/app.js') }}
+
+
+        
 
        
 <script src="https://code.jquery.com/jquery-2.2.3.min.js" integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo=" crossorigin="anonymous"></script>
 
 <script type="text/javascript">
-// var autosaveOn = false;
-// function myAutosavedTextbox_onTextChanged()
-// {
-//     if (!autosaveOn)
-//     {
-//         autosaveOn = true;
+var $status = $('#status'),
+    $commentBox = $('.text-box'),
+    $titleBox = $('.editable--title'),
+    timeoutId,
+    $entry_body,
+    $entry_color_1,
+    $entry_color_2,
+    $entry_color_3,
+    $color_input_1 = $('#entry_color_1'),
+    $color_input_2 = $('#entry_color_2'),
+    $color_input_3 = $('#entry_color_3');
 
-//         $('#myAutosavedTextbox').everyTime("300000", function(){
-//             alert('hey');
-//              $.ajax({
-//                  type: "STORE",
-//                  url: "user",
-//                  data: {
-//                     entry_body: ""
-//                  }
-//                  success: function(msg) {
-//                      $('#autosavenotify').text(msg);
-//                  }
-//              });
-//         }); //closing tag
-//     }
-// }
+$commentBox.keypress(function () {
+    $status.attr('class', 'pending').text('changes pending');
+    
+    // If a timer was already started, clear it.
+    if (timeoutId) clearTimeout(timeoutId);
+    
+    // Set timer that will save comment when it fires.
+    timeoutId = setTimeout(function () {
+        console.log("BODY: " + $commentBox.val());
+        $.ajax({
+            type: "POST",
+            url: 'colorchange',
+            data: { 
+                entry_title: $titleBox.val(),
+                _token: '{{ csrf_token() }}',
+                entry_body: $commentBox.val()
+            }
+
+
+
+    }, 50).done(function(result){
+        $entry_color_1 = result[0],
+        $entry_color_2 = result[1],
+        $entry_color_3 = result[2];        
+        // $test.css('background-color', $entry_color_1);
+        // background-image: linear-gradient(-180deg, lavender 0%, lightblue 51%,lightgreen 100%);
+        $titleBox.css('background-image','linear-gradient(-180deg,'+ $entry_color_1+' 0%, '+ $entry_color_2+' 51%, '+ $entry_color_3 +' 100%)');
+        $color_input_1.val($entry_color_1);
+        $color_input_2.val($entry_color_2);
+        $color_input_3.val($entry_color_3);
+        
+
+        console.log($entry_color_3);
+        })  
+        $status.attr('class', 'saved').text('changes saved');
+        $status.addClass('text__success');
+
+
+    });
+});    
+
+// $commentBox.keypress(function () {
+//     $status.attr('class', 'pending').text('changes pending');
+
+//     // If a timer was already started, clear it.
+//     if (timeoutId) clearTimeout(timeoutId);
+
+//     // Set timer that will save comment when it fires.
+//     timeoutId = setTimeout(function () {
+//         // Make ajax call to save data.
+//         $status.attr('class', 'saved').text('changes saved');
+//     }, 750);
+// });
 
 // $(function(){
 
 //     $(".save_btn").click(function(){
-//         // alert('cats');
+        
 //        $.ajax({
 //             type: "STORE",
-//             url: "user",
+//             url: "store",
 //             data: { 
-//                 text: "cat"
+
+//                 entry_title: "cat",
+//                 entry_body: "cat"
 //             },
 //             success: function(result){
-//                 console.log(result);
+//                 console.log('result');
 //             }
 //         })
 //     });

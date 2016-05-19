@@ -172,6 +172,12 @@ small,
 .text__primary {
   color: $brand-primary;
 }
+.text__danger {
+  color: $brand-danger;
+}
+.text__success {
+  color: $brand-success;
+}
 .heavy {
   font-weight: 600;
 }

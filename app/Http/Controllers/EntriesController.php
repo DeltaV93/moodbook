@@ -65,8 +65,24 @@ class EntriesController extends Controller {
 
 		return view('user.create', compact('fullname'));
 	}
-
 	public function store(EntryRequest $request)
+	{
+		$user = Auth::user()->get();
+		$first = Auth::user()->first_name;
+		$last = Auth::user()->last_name;
+		$fullname = $first.' '.$last;		
+
+		Entry::create(['entry_title' => $request->input('entry_title'),
+					'entry_body' => $request->input('entry_body'),
+					'user_id' => Auth::user()->id, 
+					'entry_color_1'=> $request->input('entry_color_1'), 
+					'entry_color_2'=> $request->input('entry_color_2'), 
+					'entry_color_3'=>$request->input('entry_color_3')]);
+
+		return redirect('user');
+	}
+
+	public function colorchange(EntryRequest $request)
 	{
 		$user = Auth::user()->get();
 		$first = Auth::user()->first_name;
@@ -76,9 +92,8 @@ class EntriesController extends Controller {
 		$fullname = $first.' '.$last;		
 
 		$newEntry = new Entry($request->all());
-
 		// MAKES THE RELATIONSHIP BETWEEN USER AND ENTRY 
-		$entry = Auth::user()->entries()->save($newEntry);
+		
 
 		// GETTING THE ARRY OF WORDS FROM entry_body( $entry_text)
 		$entry_text = $request->only('entry_body');
@@ -94,6 +109,7 @@ class EntriesController extends Controller {
 		$entry_lenth = count($entry_explode);
 
 		$new_array = array();
+		$value_array = array();
 		// EACH WORD GETS ANALAYZED 
 		$matched_words = Words::whereIn('word', $entry_explode)->get();
 		foreach($matched_words as $matched_word){
@@ -145,20 +161,20 @@ class EntriesController extends Controller {
 			$color_gradient_stops[] = toColor($color_number);
 		}
 
-		if($entry->entry_color_1 == null ){
-			$entry->entry_color_1 = $color_gradient_stops[0];
-		}
-		if($entry->entry_color_2 == null ){
-			$entry->entry_color_2 = $color_gradient_stops[1];
-		}
-		if($entry->entry_color_3 == null ){
-			$entry->entry_color_3 = $color_gradient_stops[2];
-		}
-		$entry->save();
+		// if($entry->entry_color_1 == null ){
+		// 	$entry->entry_color_1 = $color_gradient_stops[0];
+		// }
+		// if($entry->entry_color_2 == null ){
+		// 	$entry->entry_color_2 = $color_gradient_stops[1];
+		// }
+		// if($entry->entry_color_3 == null ){
+		// 	$entry->entry_color_3 = $color_gradient_stops[2];
+		// }
+		// $entry->save();
 
-		$entry->touch();
+		// $entry->touch();
 
-		return redirect('user');
+		return ($color_gradient_stops);
 
 	}
 	public function edit($id)

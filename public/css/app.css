@@ -5860,6 +5860,12 @@ small,
 .text__primary {
   color: #F5A623; }
 
+.text__danger {
+  color: #F53D23; }
+
+.text__success {
+  color: #1CC484; }
+
 .heavy {
   font-weight: 600; }
 
@@ -6269,8 +6275,7 @@ ul.nav.navbar-nav.navbar-right {
   color: #000;
   font-size: 48px;
   letter-spacing: 1px;
-  text-align: center;
-  background-image: linear-gradient(-180deg, lavender 0%, lightblue 51%, lightgreen 100%); }
+  text-align: center; }
 
 ::-webkit-input-placeholder {
   /* WebKit browsers */

@@ -67,6 +67,7 @@ Route::group(['middleware' => 'web'], function () {
 */      
     Route::resource('user', 'EntriesController');
     Route::get('user/edit/{id}', 'EntriesController@edit');
+    Route::post('user/colorchange', 'EntriesController@colorchange');
     Route::get('user/show/{id}', 'EntriesController@show');
     Route::get('user/destroy/{id}', 'EntriesController@destroy');
     Route::get('/register', 'HomeController@register');

@@ -13,14 +13,14 @@
 <section class="container about-us">
     <div class="row col-md-12">
         <div class="col-md-4">
-            <img src="{{ URL::asset('/img/where.svg') }}" alt="Stickfigure drawing of someone reading a book" class="col-xs-12 col-xs-offset-2 col-sm-4 col-md-5 col-md-offset-1 img-circle about-us-img about-us-why">
+            <img src="{{ URL::asset('/img/where.svg') }}" alt="Stickfigure drawing of someone reading a book" class="col-xs-12 col-xs-offset-2 col-sm-4 col-md-5 col-md-offset-2 img-circle about-us-img about-us-why">
             <div class="row col-xs-12 col-sm-12">
             <h2 class="text-center">Why</h2>
             <p class=" light about-us-body">Every been on any social medai site and see a friend complain none stop? Well, that's why. Most people do not understand the weight of their words.</p>
             </div>    
         </div>
         <div class="container col-md-4">
-            <img src="{{ URL::asset('/img/why.svg') }}" alt="Stick Figure Drawing of someone in a thinking postion with a question mark above their head." class="col-xs-12 col-xs-offset-2 col-sm-4 col-md-5 col-md-offset-1 img-circle about-us-img about-us-how">
+            <img src="{{ URL::asset('/img/why.svg') }}" alt="Stick Figure Drawing of someone in a thinking postion with a question mark above their head." class="col-xs-12 col-xs-offset-2 col-sm-4 col-md-5 col-md-offset-2 img-circle about-us-img about-us-how">
             <div class="row col-xs-12 col-sm-12">
             <h2 class="text-center">How</h2>
             <p class="col-sm-12 light about-us-body">We base everthing on the words you use. By breaking down your input, we can get a good idea of how your feeling. We then create colors based on your words.</p>

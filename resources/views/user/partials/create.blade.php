@@ -1,6 +1,9 @@
 
 <div class="col-xs-12 col-sm-12 col-md-12  col-lg-12 ">
 	{!! Form::text('entry_title', null, ['class' => 'form-control editable--title', 'placeholder'=>'Untitled']) !!}
+	{!! Form::hidden('entry_color_1',null , ['id' => 'entry_color_1'] ) !!}
+	{!! Form::hidden('entry_color_2',null , ['id' => 'entry_color_2'] ) !!}
+	{!! Form::hidden('entry_color_3',null , ['id' => 'entry_color_3'] ) !!}
 </div>
 
 <div class="col-xs-offset-2 col-md-offset-5 moodbook--edit-bar">
@@ -37,6 +40,7 @@
         </ul>
     </div>
 @endif  
+	<div id="status" class="text__danger">Not saved</div>
 	<div class="editable--textarea">
  		<div class="col-sm-10 col-sm-offset-1">
 			{!! Form::textarea('entry_body', null, ['class' => 'editable--textarea text-box col-md-12 opensans', 'id' =>'textarea', 'placeholder' => 'Enter your text here.','style'=>"width:100%"]) !!}
@@ -61,10 +65,9 @@
 	</div>
 	<div class="col-sm-2 pull-right">
 		{!! Form::submit($submitButton, ['class' => 'btn__primary']) !!}
-		
 	</div>
 </div>
 
-<!-- <a class="btn-primary btn save_btn">CATS NOW</a> -->
+
 
 
