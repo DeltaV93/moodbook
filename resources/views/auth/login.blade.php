@@ -38,7 +38,7 @@
             </div>
 
             <p class="light italic opensans">Need to sign up? <a href="/register"> Click here</a></p>
-            <a class="btn btn-link light italic opensans" href="{{ url('/password/reset') }}">Forgot Your Password?</a>
+            <a class="light italic opensans" href="{{ url('/password/reset') }}">Forgot Your Password?</a>
 <!--             <p class="light italic opensans login--signup">LOGIN WITH FACEBOOK <a href="redirect/facebook"> Click here</a></p>
             <p class="light italic opensans login--signup">LOGIN WITH twitter <a href="redirect/twitter"> Click here</a></p> -->
 
