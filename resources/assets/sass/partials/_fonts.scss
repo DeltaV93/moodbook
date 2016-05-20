@@ -1,119 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Raleway:200italic,400,300,700italic|Open+Sans:400,300);
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,400italic);
-// .jumbotron {
-// 	color: #fff;
-// 	font-family: 'Raleway', sans-serif;
-// }
-// .light {
-// 	font-weight: 300; 
-// }
-// .italic {
-// 	font-style: italic;
-// 	color: #8C8A8A;
-// }
-// .opensans{
-// 	font-family: 'Open Sans', sans-serif;
-// }
-
-// h1 {
-// 	font-size: 64px;
-// }
-
-// p {
-// 	font-size: 16px;
-// 	font-family: 'Open Sans', sans-serif;
-// 	margin-bottom: 24px;
-// }
-// .date__month {
-// 	font-size: 29px;
-// 	letter-spacing: 5.9px;
-// 	position: abosulte;
-// 	top: .375rem;
-// }
-// .date__day {
-// 	font-size: 50px;
-// 	letter-spacing: 2.27px;
-// 	font-family: Raleway-BoldItalic;
-//     top: -25px;
-//     position: relative;
-//     left: 10px;	
-// }
-// .date__year {
-// 	transform: rotate(270deg);
-// 	font-family: OpenSans;
-// 	font-style: italic;
-// 	font-size: 36px;
-// 	letter-spacing: 7.33px;
-//     position: absolute;
-//     top: 30px;
-//     left: 51px;	
-// }
-// .entry_post--identifier {
-// 	// margin-left: 27px;
-// }
-// .entry_post--identifier__title {
-// 	font-size: 2.125em;
-// }
-// .entry_view--identifier__title {
-// 	font-size: 50px;
-// 	letter-spacing: 2.27px;
-// }
-// .entry_view--identifier__author {
-// 	font-size: 18px;
-// 	font-family: OpenSansLight-Italic;
-// 	color: #8C8A8A;
-// 	letter-spacing: 3.66px;
-// }
-// .entry_view--identifier__tags {
-// 	font-size: 15px;
-// 	color: #9B9B9B;	
-// 	font-family: 'Raleway', sans-serif;
-// 	font-weight: 200;
-// 	font-style: italic;
-// }
-// .profile_header--usersname {
-// 	font-size: 27px;
-// 	color: #21252A;
-// 	letter-spacing: 5.49px;	
-// }
-
-// .created--timestamp {
-// 	font-size: 18px;
-// 	color: #8C8A8A;
-// 	letter-spacing: 3.66px;
-// }
-// .edited--timestamp {
-// 	font-size: 12px;
-// 	color: #8C8A8A;
-// 	letter-spacing: 2.44px;
-// }
-// .settings--label {
-// 	font-size: 0.8125em;
-// }
-
-
-
-
-// MODULAR SCALE
-//
-
-// golden:           1.618;
-// minor-second:     1.067;
-// major-second:     1.125;
-// minor-third:      1.2;
-// major-third:      1.25;
-// perfect-fourth:   1.333;
-// augmented-fourth: 1.414;
-// perfect-fifth:    1.5;
-// minor-sixth:      1.6;
-// major-sixth:      1.667;
-// minor-seventh:    1.778;
-// major-seventh:    1.875;
-// octave:           2;
-// major-tenth:      2.5;
-// major-eleventh:   2.667;
-// major-twelfth:    3;
-// double-octave:    4;
 
 $modular-scale-ratio: 1.25;
 
@@ -180,4 +66,10 @@ small,
 }
 .heavy {
   font-weight: 600;
+}
+a {
+  color: $brand-primary;
+  &:hover{
+    color: $brand-primary;
+  }
 }

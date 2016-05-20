@@ -5869,6 +5869,11 @@ small,
 .heavy {
   font-weight: 600; }
 
+a {
+  color: #F5A623; }
+  a:hover {
+    color: #F5A623; }
+
 .text-box {
   border: 1px solid #979797;
   box-shadow: inset 0px 1px 1px 0px rgba(0, 0, 0, 0.2);
