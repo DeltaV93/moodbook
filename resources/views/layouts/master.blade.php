@@ -12,6 +12,7 @@
         
             {{-- APP STYLESHEETS --}}
         {{-- {!! HTML::style('css/components.css') !!} --}}
+        <link href='https://fonts.googleapis.com/css?family=Raleway:400,300,200italic,700italic|Open+Sans:400,300' rel='stylesheet' type='text/css'>
         {!! HTML::style('css/app.css') !!}
     </head>
     <body>

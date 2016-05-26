@@ -9,11 +9,12 @@
             <meta name="description" content="@yield('description')">
             
         <link rel="icon" href="{!! asset('favicon.png') !!}" type="image/x-icon">
+        <link href='https://fonts.googleapis.com/css?family=Raleway:400,300,200italic,700italic|Open+Sans:400,300' rel='stylesheet' type='text/css'>
         
             {{-- APP STYLESHEETS --}}
         {{-- {!! HTML::style('css/components.css') !!} --}}
         {!! HTML::style('css/app.css') !!}
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+        
 
     </head>
     <body>
@@ -38,6 +39,8 @@
        
 <!-- <script src="https://code.jquery.com/jquery-2.2.3.min.js" integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo=" crossorigin="anonymous"></script> -->
 
+ 
+    </body>
 <script type="text/javascript">
 var $status = $('#status'),
     $commentBox = $('.text-box'),
@@ -90,6 +93,5 @@ $commentBox.keypress(function () {
     });
 });    
 
-</script>  
-    </body>
+</script>     
 </html>
